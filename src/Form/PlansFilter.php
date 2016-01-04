@@ -49,6 +49,11 @@ class PlansFilter extends InputFilter
             'name' => 'status',
             'required' => true,
         ));
+        // order
+        $this->add(array(
+            'name' => 'order',
+            'required' => false,
+        ));
         // price
         $this->add(array(
             'name' => 'price',

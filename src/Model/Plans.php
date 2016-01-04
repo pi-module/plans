@@ -22,6 +22,6 @@ class Plans extends Model
      */
     protected $columns = array(
         'id', 'title', 'status', 'time_create', 'time_update', 'time_period',
-        'price', 'vat', 'type', 'setting'
+        'price', 'vat', 'type', 'order', 'setting'
     );
 }

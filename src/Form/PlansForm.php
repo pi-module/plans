@@ -94,6 +94,18 @@ class PlansForm extends BaseForm
                 'required' => true,
             )
         ));
+        // order
+        $this->add(array(
+            'name' => 'order',
+            'options' => array(
+                'label' => __('Order'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+
+            )
+        ));
         // extra price
         $this->add(array(
             'name' => 'extra_price',
