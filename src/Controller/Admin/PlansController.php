@@ -38,6 +38,37 @@ class PlansController extends ActionController
 
     public function updateAction()
     {
-
+        // Get id
+        $id = $this->params('id');
+        // Set form
+        $form = new PlansForm('plans');
+        if ($this->request->isPost()) {
+            $data = $this->request->getPost();
+            $form->setInputFilter(new PlansFilter);
+            $form->setData($data);
+            if ($form->isValid()) {
+                $values = $form->getData();
+                // Save values
+                if (!empty($values['id'])) {
+                    $row = $this->getModel('plans')->find($values['id']);
+                } else {
+                    $row = $this->getModel('plans')->createRow();
+                }
+                $row->assign($values);
+                $row->save();
+                // Check it save or not
+                $message = __('Plan data saved successfully.');
+                $this->jump(array('action' => 'index'), $message);
+            }
+        } else {
+            if ($id) {
+                $values = $this->getModel('plans')->find($id)->toArray();
+                $form->setData($values);
+            }
+        }
+        // Set view
+        $this->view()->setTemplate('plans-update');
+        $this->view()->assign('form', $form);
+        $this->view()->assign('title', __('Add plan'));
     }
 }

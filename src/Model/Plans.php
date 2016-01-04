@@ -21,6 +21,7 @@ class Plans extends Model
      * {@inheritDoc}
      */
     protected $columns = array(
-        'id', 'title', 'status', 'time_create', 'time_update', 'time_period', 'price', 'vat', 'setting',
+        'id', 'title', 'status', 'time_create', 'time_update', 'time_period',
+        'price', 'vat', 'type', 'setting',
     );
 }
