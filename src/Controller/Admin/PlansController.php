@@ -52,8 +52,40 @@ class PlansController extends ActionController
             $form->setData($data);
             if ($form->isValid()) {
                 $values = $form->getData();
+                // Get roles
+                $roleList = array();
+                $roles = Pi::service('registry')->role->read('front');
+                unset($roles['member']);
+                unset($roles['webmaster']);
+                unset($roles['guest']);
+                if (count($roles) > 0) {
+                    foreach ($roles as $key => $role) {
+                        $roleList[] = $key;
+                    }
+                }
+                // Set type
+                if ($values['type'] == 'manual') {
+                    $action = array(
+                        'action' => 'manual',
+                    );
+                    $values['type'] = 'manual';
+                } elseif(!empty($roleList) && in_array($values['type'], $roleList)) {
+                    $action = array(
+                        'action' => 'automatic',
+                        'type' => 'role',
+                        'role' => $values['type'],
+                    );
+                    $values['type'] = 'role';
+                } else {
+                    $action = array(
+                        'action' => 'manual',
+                    );
+                    $values['type'] = 'manual';
+                }
                 // Set setting
-                $setting = array(
+                $setting = array();
+                $setting['action'] = $action;
+                $setting['description'] = array(
                     'description_1' => $values['description_1'],
                     'description_2' => $values['description_2'],
                     'description_3' => $values['description_3'],
@@ -85,9 +117,22 @@ class PlansController extends ActionController
             }
         } else {
             if ($id) {
+                // Get plan info
                 $values = $this->getModel('plans')->find($id)->toArray();
+                // Set description
                 $setting = Json::decode($values['setting'], true);
-                $values = array_merge($values, $setting);
+                $values = array_merge($values, $setting['description']);
+                // Set type
+                switch ($values['type']) {
+                    case 'manual':
+                        $values['type'] = 'manual';
+                        break;
+
+                    case 'role':
+                        $values['type'] = $setting['action']['role'];
+                        break;
+                }
+                // Set on form
                 $form->setData($values);
             }
         }

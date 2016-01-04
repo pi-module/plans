@@ -53,6 +53,20 @@ class PlansForm extends BaseForm
                 'required' => true,
             )
         ));
+        // type
+        $this->add(array(
+            'name' => 'type',
+            'type' => 'Module\Plans\Form\Element\Type',
+            'options' => array(
+                'label' => __('Type'),
+                'category' => '',
+                'module' => $this->module,
+            ),
+            'attributes' => array(
+                'description' => '',
+                'required' => true,
+            )
+        ));
         // category
         $this->add(array(
             'name' => 'category',
