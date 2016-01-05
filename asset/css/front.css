@@ -13,7 +13,6 @@
 .pricing i {
     display: block;
     margin: auto;
-    width: 32px;
     font-size: 50px;
 }
 
@@ -77,46 +76,323 @@
 }
 
 /* pricing color */
-.p-green big,
-.p-green i,
-.p-green h3 {
-    color: #4c7737;
-}
-
-.p-green button,
-.p-green a {
-    background: #4c7737;
-}
-
-.p-yel big,
-.p-yel i,
-.p-yel h3 {
-    color: #ffbb42;
-}
-
-.p-yel button,
-.p-yel a {
-    background: #ffbb42;
-}
-
+/* From : https://www.google.com/design/spec/style/color.html */
 .p-red big,
 .p-red i,
 .p-red h3 {
-    color: #e13c4c;
+    color: #f44336;
 }
 
 .p-red button,
 .p-red a {
-    background: #e13c4c;
+    background: #f44336;
+}
+
+.p-red .pricing {
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+}
+
+.p-pink big,
+.p-pink i,
+.p-pink h3 {
+    color: #e91e63;
+}
+
+.p-pink button,
+.p-pink a {
+    background: #e91e63;
+}
+
+.p-pink .pricing {
+    background: #fce4ec;
+    border: 1px solid #f8bbd0;
+}
+
+.p-purple big,
+.p-purple i,
+.p-purple h3 {
+    color: #9c27b0;
+}
+
+.p-purple button,
+.p-purple a {
+    background: #9c27b0;
+}
+
+.p-purple .pricing {
+    background: #f3e5f5;
+    border: 1px solid #e1bee7;
+}
+
+.p-deep-purple big,
+.p-deep-purple i,
+.p-deep-purple h3 {
+    color: #673ab7;
+}
+
+.p-deep-purple button,
+.p-deep-purple a {
+    background: #673ab7;
+}
+
+.p-deep-purple .pricing {
+    background: #ede7f6;
+    border: 1px solid #d1c4e9;
+}
+
+.p-indigo big,
+.p-indigo i,
+.p-indigo h3 {
+    color: #3f51b5;
+}
+
+.p-indigo button,
+.p-indigo a {
+    background: #3f51b5;
+}
+
+.p-indigo .pricing {
+    background: #e8eaf6;
+    border: 1px solid #c5cae9;
 }
 
 .p-blue big,
 .p-blue i,
 .p-blue h3 {
-    color: #3f4bb8;
+    color: #2196f3;
 }
 
 .p-blue button,
 .p-blue a {
-    background: #3f4bb8;
+    background: #2196f3;
+}
+
+.p-blue .pricing {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+}
+
+.p-light-blue big,
+.p-light-blue i,
+.p-light-blue h3 {
+    color: #03a9f4;
+}
+
+.p-light-blue button,
+.p-light-blue a {
+    background: #03a9f4;
+}
+
+.p-light-blue .pricing {
+    background: #e1f5fe;
+    border: 1px solid #b3e5fc;
+}
+
+.p-cyan big,
+.p-cyan i,
+.p-cyan h3 {
+    color: #00bcd4;
+}
+
+.p-cyan button,
+.p-cyan a {
+    background: #00bcd4;
+}
+
+.p-cyan .pricing {
+    background: #e0f7fa;
+    border: 1px solid #b2ebf2;
+}
+
+.p-teal big,
+.p-teal i,
+.p-teal h3 {
+    color: #009688;
+}
+
+.p-teal button,
+.p-teal a {
+    background: #009688;
+}
+
+.p-teal .pricing {
+    background: #e0f2f1;
+    border: 1px solid #b2dfdb;
+}
+
+.p-green big,
+.p-green i,
+.p-green h3 {
+    color: #4caf50;
+}
+
+.p-green button,
+.p-green a {
+    background: #4caf50;
+}
+
+.p-green .pricing {
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
+
+.p-light-green big,
+.p-light-green i,
+.p-light-green h3 {
+    color: #8bc34a;
+}
+
+.p-light-green button,
+.p-light-green a {
+    background: #8bc34a;
+}
+
+.p-light-green .pricing {
+    background: #f1f8e9;
+    border: 1px solid #dcedc8;
+}
+
+.p-lime big,
+.p-lime i,
+.p-lime h3 {
+    color: #cddc39;
+}
+
+.p-lime button,
+.p-lime a {
+    background: #cddc39;
+}
+
+.p-lime .pricing {
+    background: #f9fbe7;
+    border: 1px solid #f0f4c3;
+}
+
+.p-yellow big,
+.p-yellow i,
+.p-yellow h3 {
+    color: #ffeb3b;
+}
+
+.p-yellow button,
+.p-yellow a {
+    background: #ffeb3b;
+}
+
+.p-yellow .pricing {
+    background: #fffde7;
+    border: 1px solid #fff9c4;
+}
+
+.p-amber big,
+.p-amber i,
+.p-amber h3 {
+    color: #ffc107;
+}
+
+.p-amber button,
+.p-amber a {
+    background: #ffc107;
+}
+
+.p-amber .pricing {
+    background: #fff8e1;
+    border: 1px solid #ffecb3;
+}
+
+.p-orange big,
+.p-orange i,
+.p-orange h3 {
+    color: #ff9800;
+}
+
+.p-orange button,
+.p-orange a {
+    background: #ff9800;
+}
+
+.p-orange .pricing {
+    background: #fff3e0;
+    border: 1px solid #ffe0b2;
+}
+
+.p-deep-orange big,
+.p-deep-orange i,
+.p-deep-orange h3 {
+    color: #ff5722;
+}
+
+.p-deep-orange button,
+.p-deep-orange a {
+    background: #ff5722;
+}
+
+.p-deep-orange .pricing {
+    background: #fbe9e7;
+    border: 1px solid #ffccbc;
+}
+
+.p-brown big,
+.p-brown i,
+.p-brown h3 {
+    color: #795548;
+}
+
+.p-brown button,
+.p-brown a {
+    background: #795548;
+}
+
+.p-brown .pricing {
+    background: #efebe9;
+    border: 1px solid #d7ccc8;
+}
+
+.p-grey big,
+.p-grey i,
+.p-grey h3 {
+    color: #9e9e9e;
+}
+
+.p-grey button,
+.p-grey a {
+    background: #9e9e9e;
+}
+
+.p-grey .pricing {
+    background: #fafafa;
+    border: 1px solid #f5f5f5;
+}
+
+.p-blue-grey big,
+.p-blue-grey i,
+.p-blue-grey h3 {
+    color: #607d8b;
+}
+
+.p-blue-grey button,
+.p-blue-grey a {
+    background: #607d8b;
+}
+
+.p-blue-grey .pricing {
+    background: #eceff1;
+    border: 1px solid #cfd8dc;
+}
+
+.p-black big,
+.p-black i,
+.p-black h3 {
+    color: #000000;
+}
+
+.p-black button,
+.p-black a {
+    background: #000000;
+}
+
+.p-black .pricing {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
 }

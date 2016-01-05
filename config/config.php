@@ -17,6 +17,10 @@ return array(
             'name' => 'admin'
         ),
         array(
+            'title' => _a('View'),
+            'name' => 'view'
+        ),
+        array(
             'title' => _a('Order'),
             'name' => 'order'
         ),
@@ -31,6 +35,22 @@ return array(
             'filter' => 'number_int',
             'value' => 10
         ),
+        // View
+        'view_type' => array(
+            'title' => _a('Plans view type'),
+            'edit' => array(
+                'type' => 'select',
+                'options' => array(
+                    'options' => array(
+                        'list' => _a('List'),
+                        'tab' => _a('Tab'),
+                    ),
+                ),
+            ),
+            'filter' => 'text',
+            'value' => 'list',
+            'category' => 'view',
+        ),
         // Order
         'order_active' => array(
             'category' => 'order',
@@ -39,6 +59,23 @@ return array(
             'edit' => 'checkbox',
             'filter' => 'number_int',
             'value' => 1
+        ),
+        // Texts
+        'index_text_title' => array(
+            'category' => 'head_meta',
+            'title' => _a('Title for homepage'),
+            'description' => '',
+            'edit' => 'text',
+            'filter' => 'string',
+            'value' => _a('List of our website plans'),
+        ),
+        'index_text_description' => array(
+            'category' => 'head_meta',
+            'title' => _a('Description for homepage'),
+            'description' => '',
+            'edit' => 'textarea',
+            'filter' => 'string',
+            'value' => ''
         ),
     ),
 );

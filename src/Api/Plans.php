@@ -34,6 +34,7 @@ class Plans extends AbstractApi
 
     public function getPlans()
     {
+        // Get plans
         $plans = array();
         $order = array('order ASC, id ASC');
         $where = array('status' => 1);
@@ -42,7 +43,26 @@ class Plans extends AbstractApi
         foreach ($rowset as $row) {
             $plans[$row->id] = $this->canonizePlan($row);
         }
-        return $plans;
+        // Get category
+        $category = array(
+            0 => array(
+                'id' => 0,
+                'title' => '',
+                'plans' => array(),
+            ),
+        );
+        $where = array('status' => 1);
+        $select = Pi::model('category', $this->getModule())->select()->where($where);
+        $rowset = Pi::model('category', $this->getModule())->selectWith($select);
+        foreach ($rowset as $row) {
+            $category[$row->id] = $row->toArray();
+            $category[$row->id]['plans'] = array();
+        }
+        // Add plans to category
+        foreach ($plans as $plan) {
+            $category[$plan['category']]['plans'][$plan['id']] = $plan;
+        }
+        return $category;
     }
 
     public function canonizePlan($plan)

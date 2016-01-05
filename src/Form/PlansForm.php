@@ -314,12 +314,31 @@ class PlansForm extends BaseForm
             'options' => array(
                 'label' => __('Color'),
                 'value_options' => array(
-                    'p-green' => __('Green'),
-                    'p-yel' => __('Yellow'),
                     'p-red' => __('Red'),
+                    'p-pink' => __('Pink'),
+                    'p-purple' => __('Purple'),
+                    'p-deep-purple' => __('Deep Purple'),
+                    'p-indigo' => __('Indigo'),
                     'p-blue' => __('Blue'),
+                    'p-light-blue' => __('Light Blue'),
+                    'p-cyan' => __('Cyan'),
+                    'p-teal' => __('Teal'),
+                    'p-green' => __('Green'),
+                    'p-light-green' => __('Light Green'),
+                    'p-lime' => __('Lime'),
+                    'p-yellow' => __('Yellow'),
+                    'p-amber' => __('Amber'),
+                    'p-orange' => __('Orange'),
+                    'p-deep-orange' => __('Deep Orange'),
+                    'p-brown' => __('Brown'),
+                    'p-grey' => __('Grey'),
+                    'p-blue-grey' => __('Blue Grey'),
+                    'p-black' => __('Black'),
                 ),
             ),
+            'attributes' => array(
+                'description' => __('Use google design standard'),
+            )
         ));
         // Save
         $this->add(array(

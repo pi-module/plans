@@ -1,5 +1,6 @@
 CREATE TABLE `{plans}` (
   `id`          INT(10) UNSIGNED                 NOT NULL AUTO_INCREMENT,
+  `category`    INT(10) UNSIGNED                 NOT NULL DEFAULT '0',
   `title`       VARCHAR(255)                     NOT NULL DEFAULT '',
   `status`      TINYINT(1) UNSIGNED              NOT NULL DEFAULT '0',
   `time_create` INT(10) UNSIGNED                 NOT NULL DEFAULT '0',

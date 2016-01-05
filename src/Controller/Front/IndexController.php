@@ -21,10 +21,15 @@ class IndexController extends ActionController
 {
     public function indexAction()
     {
-        $plans = Pi::api('plans', 'plans')->getPlans();
-
+        // Get info from url
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
+        // Get list of plans and category
+        $categories = Pi::api('plans', 'plans')->getPlans();
         // Set view
         $this->view()->setTemplate('index-index');
-        $this->view()->assign('plans', $plans);
+        $this->view()->assign('categories', $categories);
+        $this->view()->assign('config', $config);
     }
 }
