@@ -16,46 +16,48 @@
             <p><?php echo $message; ?></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-            <ul class="pricing <?php echo $this->escape($plan['color']); ?>">
-                <li>
-                    <i class="fa <?php echo $this->escape($plan['icon']); ?>"></i>
-                    <big><?php echo $this->escape($plan['title']); ?></big>
-                </li>
-                <?php if (!empty($plan['description_1'])) { ?>
-                    <li><?php echo $this->escape($plan['description_1']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_2'])) { ?>
-                    <li><?php echo $this->escape($plan['description_2']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_3'])) { ?>
-                    <li><?php echo $this->escape($plan['description_3']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_4'])) { ?>
-                    <li><?php echo $this->escape($plan['description_4']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_5'])) { ?>
-                    <li><?php echo $this->escape($plan['description_5']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_6'])) { ?>
-                    <li><?php echo $this->escape($plan['description_6']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_7'])) { ?>
-                    <li><?php echo $this->escape($plan['description_7']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_8'])) { ?>
-                    <li><?php echo $this->escape($plan['description_8']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_9'])) { ?>
-                    <li><?php echo $this->escape($plan['description_9']); ?></li>
-                <?php } ?>
-                <?php if (!empty($plan['description_10'])) { ?>
-                    <li><?php echo $this->escape($plan['description_10']); ?></li>
-                <?php } ?>
-                <li>
-                    <h3><?php echo $this->escape($plan['price_view']); ?></h3>
-                    <span><?php echo $this->escape($plan['time_period_view']); ?></span>
-                </li>
-            </ul>
+            <div class="<?php echo $this->escape($plan['color']); ?>">
+                <ul class="pricing">
+                    <li>
+                        <i class="fa <?php echo $this->escape($plan['icon']); ?>"></i>
+                        <big><?php echo $this->escape($plan['title']); ?></big>
+                    </li>
+                    <?php if (!empty($plan['description_1'])) { ?>
+                        <li><?php echo $this->escape($plan['description_1']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_2'])) { ?>
+                        <li><?php echo $this->escape($plan['description_2']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_3'])) { ?>
+                        <li><?php echo $this->escape($plan['description_3']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_4'])) { ?>
+                        <li><?php echo $this->escape($plan['description_4']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_5'])) { ?>
+                        <li><?php echo $this->escape($plan['description_5']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_6'])) { ?>
+                        <li><?php echo $this->escape($plan['description_6']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_7'])) { ?>
+                        <li><?php echo $this->escape($plan['description_7']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_8'])) { ?>
+                        <li><?php echo $this->escape($plan['description_8']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_9'])) { ?>
+                        <li><?php echo $this->escape($plan['description_9']); ?></li>
+                    <?php } ?>
+                    <?php if (!empty($plan['description_10'])) { ?>
+                        <li><?php echo $this->escape($plan['description_10']); ?></li>
+                    <?php } ?>
+                    <li>
+                        <h3><?php echo $this->escape($plan['price_view']); ?></h3>
+                        <span><?php echo $this->escape($plan['time_period_view']); ?></span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="text-center">

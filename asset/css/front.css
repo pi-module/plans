@@ -2,7 +2,7 @@
 .pricing {
     text-align: center;
     border: 1px solid #f0f0f0;
-    color: #777;
+    color: #666666;
     font-size: 14px;
     padding-left: 0;
     margin-bottom: 30px;
@@ -27,7 +27,7 @@
 }
 
 .pricing li + li {
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #e6e6e6;
 }
 
 .pricing big {
