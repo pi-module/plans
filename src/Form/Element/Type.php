@@ -31,7 +31,7 @@ class Type extends Select
             unset($roles['guest']);
             if (count($roles) > 0) {
                 foreach ($roles as $key => $role) {
-                    $this->valueOptions[$key] = $role['title'];
+                    $this->valueOptions[$key] = sprintf(__('Add role : %s'), $role['title']);
                 }
             }
         }

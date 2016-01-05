@@ -97,6 +97,10 @@ class PlansController extends ActionController
                     'description_9' => $values['description_9'],
                     'description_10' => $values['description_10'],
                 );
+                $setting['design'] = array(
+                    'icon' => $values['icon'],
+                    'color' => $values['color'],
+                );
                 $values['setting'] = Json::encode($setting);
                 // Set time
                 if (empty($values['id'])) {
@@ -121,7 +125,7 @@ class PlansController extends ActionController
                 $values = $this->getModel('plans')->find($id)->toArray();
                 // Set description
                 $setting = Json::decode($values['setting'], true);
-                $values = array_merge($values, $setting['description']);
+                $values = array_merge($values, $setting['description'], $setting['design']);
                 // Set type
                 switch ($values['type']) {
                     case 'manual':

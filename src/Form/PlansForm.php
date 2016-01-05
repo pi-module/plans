@@ -98,7 +98,7 @@ class PlansForm extends BaseForm
         $this->add(array(
             'name' => 'order',
             'options' => array(
-                'label' => __('Order'),
+                'label' => __('Order view'),
             ),
             'attributes' => array(
                 'type' => 'text',
@@ -145,7 +145,7 @@ class PlansForm extends BaseForm
                 'options' => array(
                     'label' => __('Period'),
                     'value_options' => array(
-                        0 => __('Unlimit'),
+                        0 => __('Unlimited'),
                         15 => __('15 days'),
                         30 => __('1 month'),
                         60 => __('2 months'),
@@ -177,7 +177,7 @@ class PlansForm extends BaseForm
                 'label' => __('Description options'),
             ),
         ));
-// description_1
+        // description_1
         $this->add(array(
             'name' => 'description_1',
             'options' => array(
@@ -286,6 +286,40 @@ class PlansForm extends BaseForm
                 'type' => 'text',
                 'description' => '',
             )
+        ));
+
+        // extra design
+        $this->add(array(
+            'name' => 'extra_design',
+            'type' => 'fieldset',
+            'options' => array(
+                'label' => __('Design options'),
+            ),
+        ));
+        // icon
+        $this->add(array(
+            'name' => 'icon',
+            'options' => array(
+                'label' => __('Icon'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => __('Use fontawesome.io icons, and set icon name like fa-home'),
+            )
+        ));
+        // color
+        $this->add(array(
+            'name' => 'color',
+            'type' => 'select',
+            'options' => array(
+                'label' => __('Color'),
+                'value_options' => array(
+                    'p-green' => __('Green'),
+                    'p-yel' => __('Yellow'),
+                    'p-red' => __('Red'),
+                    'p-blue' => __('Blue'),
+                ),
+            ),
         ));
         // Save
         $this->add(array(

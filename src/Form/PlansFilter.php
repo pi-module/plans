@@ -179,5 +179,15 @@ class PlansFilter extends InputFilter
                 ),
             ),
         ));
+        // icon
+        $this->add(array(
+            'name' => 'icon',
+            'required' => false,
+        ));
+        // color
+        $this->add(array(
+            'name' => 'color',
+            'required' => false,
+        ));
     }
 }

@@ -16,6 +16,10 @@ return array(
             'title' => _a('Admin'),
             'name' => 'admin'
         ),
+        array(
+            'title' => _a('Order'),
+            'name' => 'order'
+        ),
     ),
     'item' => array(
         // Admin
@@ -26,6 +30,15 @@ return array(
             'edit' => 'text',
             'filter' => 'number_int',
             'value' => 10
+        ),
+        // Order
+        'order_active' => array(
+            'category' => 'order',
+            'title' => _a('Order is active ?'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 1
         ),
     ),
 );

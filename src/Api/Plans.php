@@ -54,7 +54,7 @@ class Plans extends AbstractApi
         $plan = $plan->toArray();
         // Set description
         $setting = Json::decode($plan['setting'], true);
-        $plan = array_merge($plan, $setting['description']);
+        $plan = array_merge($plan, $setting['description'], $setting['action'], $setting['design']);
         // Set price
         $plan['price_view'] = Pi::api('api', 'plans')->viewPrice($plan['price']);
         // Set vat
@@ -66,6 +66,53 @@ class Plans extends AbstractApi
             'action' => 'add',
             'id' => $plan['id'],
         )));
+        // Set product Url
+        $plan['productUrl'] = Pi::url(Pi::service('url')->assemble('plans', array(
+            'module' => $this->getModule(),
+            'controller' => 'index',
+            'action' => 'index',
+        )));
+        // Set product Url
+        $plan['thumbUrl'] = '';
+        // Set time_period_view
+        $plan['time_period_view'] = '';
+        switch ($plan['time_period']) {
+            case 0:
+                $plan['time_period_view'] = __('Unlimited');
+                break;
+
+            case 15:
+                $plan['time_period_view'] = __('15 days');
+                break;
+
+            case 30:
+                $plan['time_period_view'] = __('1 month');
+                break;
+
+            case 60:
+                $plan['time_period_view'] = __('2 months');
+                break;
+
+            case 90:
+                $plan['time_period_view'] = __('3 months');
+                break;
+
+            case 120:
+                $plan['time_period_view'] = __('4 months');
+                break;
+
+            case 150:
+                $plan['time_period_view'] = __('5 months');
+                break;
+
+            case 180:
+                $plan['time_period_view'] = __('6 months');
+                break;
+
+            case 365:
+                $plan['time_period_view'] = __('12 months');
+                break;
+        }
         // return item
         return $plan;
     }
