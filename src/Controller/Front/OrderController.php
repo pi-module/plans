@@ -141,11 +141,26 @@ class OrderController extends ActionController
         // Get invoice information
         Pi::service('i18n')->load(array('module/order', 'default'));
         $invoices = Pi::api('invoice', 'order')->getInvoiceFromOrder($orderOrder['id']);
+        // Set message
+        switch ($plan['type']) {
+            case 'manual':
+                $message = __('Your bought plan need manual setup by admin, we will work on it and after finish setup make contact to you');
+                break;
+
+            case 'role':
+                $message = sprintf(__('We active your user account access on <strong>%s</strong> group / role, Now you can use all new features'), $plan['role']);
+                break;
+
+            case 'module':
+                $message = '';
+                break;
+        }
         // Set view
         $this->view()->setTemplate('order-finish');
         $this->view()->assign('orderOrder', $orderOrder);
         $this->view()->assign('orderPlan', $orderPlan);
         $this->view()->assign('invoices', $invoices);
         $this->view()->assign('plan', $plan);
+        $this->view()->assign('message', $message);
     }
 }
