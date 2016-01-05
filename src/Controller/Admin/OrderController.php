@@ -20,6 +20,8 @@ class OrderController extends ActionController
 {
     public function indexAction()
     {
+        // Get list of plans
+        $plans = Pi::api('plans', 'plans')->getPlansLight();
         // Get info
         $list = array();
         $order = array('id DESC');
@@ -27,7 +29,9 @@ class OrderController extends ActionController
         $rowset = $this->getModel('order')->selectWith($select);
         // Make list
         foreach ($rowset as $row) {
-            $list[$row->id] = $row->toArray();
+            $list[$row->id] = Pi::api('order', 'plans')->canonizeOrder($row);
+            $list[$row->id]['user'] = Pi::user()->get($row->uid, array('id', 'identity', 'name', 'email'));
+            $list[$row->id]['plan'] = $plans[$row->plan];
         }
         // Set view
         $this->view()->setTemplate('order-index');

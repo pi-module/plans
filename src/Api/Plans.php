@@ -19,6 +19,7 @@ use Zend\Json\Json;
 
 /*
  * Pi::api('plans', 'plans')->getPlan($parameter, $type = 'id');
+ * Pi::api('plans', 'plans')->getPlansLight();
  * Pi::api('plans', 'plans')->getPlans();
  * Pi::api('plans', 'plans')->canonizePlan($plan);
  */
@@ -30,6 +31,20 @@ class Plans extends AbstractApi
         $plan = Pi::model('plans', $this->getModule())->find($parameter, $type);
         $plan = $this->canonizePlan($plan);
         return $plan;
+    }
+
+    public function getPlansLight()
+    {
+        // Get plans
+        $plans = array();
+        $order = array('order ASC, id ASC');
+        $where = array('status' => 1);
+        $select = Pi::model('plans', $this->getModule())->select()->where($where)->order($order);
+        $rowset = Pi::model('plans', $this->getModule())->selectWith($select);
+        foreach ($rowset as $row) {
+            $plans[$row->id] = $this->canonizePlan($row);
+        }
+        return $plans;
     }
 
     public function getPlans()
