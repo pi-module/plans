@@ -1,0 +1,415 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: support\n"
+"POT-Creation-Date: 2016-01-15 13:35+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Api/Plans.php:116 src/Form/PlansForm.php:148
+msgid "Unlimited"
+msgstr "دائمی"
+
+#: src/Api/Plans.php:120 src/Form/PlansForm.php:149
+msgid "15 days"
+msgstr "۱۵ روزه"
+
+#: src/Api/Plans.php:124 src/Form/PlansForm.php:150
+msgid "1 month"
+msgstr "۱ ماه"
+
+#: src/Api/Plans.php:128 src/Form/PlansForm.php:151
+msgid "2 months"
+msgstr "۲ ماه"
+
+#: src/Api/Plans.php:132 src/Form/PlansForm.php:152
+msgid "3 months"
+msgstr "۳ ماه"
+
+#: src/Api/Plans.php:136 src/Form/PlansForm.php:153
+msgid "4 months"
+msgstr "۴ ماه"
+
+#: src/Api/Plans.php:140 src/Form/PlansForm.php:154
+msgid "5 months"
+msgstr "۵ ماه"
+
+#: src/Api/Plans.php:144 src/Form/PlansForm.php:155
+msgid "6 months"
+msgstr "۶ ماه"
+
+#: src/Api/Plans.php:148 src/Form/PlansForm.php:156
+msgid "12 months"
+msgstr "۱۲ ماه"
+
+#: src/Controller/Admin/CategoryController.php:60
+msgid "Category data saved successfully."
+msgstr "اطلاعات شاخه به موفقیت ذخیره شد"
+
+#: src/Controller/Admin/CategoryController.php:72
+#: template/admin/category-index.phtml:4 template/admin/category-index.phtml:6
+msgid "Add category"
+msgstr "شاخه جدید"
+
+#: src/Controller/Admin/PlansController.php:119
+msgid "Plan data saved successfully."
+msgstr "اطلاعات پلن با موفقیت ذخیره شد"
+
+#: src/Controller/Admin/PlansController.php:146
+#: template/admin/plans-index.phtml:4 template/admin/plans-index.phtml:6
+msgid "Add plan"
+msgstr "پلن جدید"
+
+#: src/Controller/Front/OrderController.php:29
+#: src/Controller/Front/OrderController.php:92
+msgid "So sorry, At this moment order is inactive"
+msgstr "متاسفانه در این لحظه امکان ثبت سفارش وجود ندارد"
+
+#: src/Controller/Front/OrderController.php:43
+#: src/Controller/Front/OrderController.php:52
+msgid "You need select plan"
+msgstr "لطفا یک پلن انتخاب کنید"
+
+#: src/Controller/Front/OrderController.php:80
+msgid "Order module not installed"
+msgstr "ماژول سفارش نصب نشده است"
+
+#: src/Controller/Front/OrderController.php:106
+msgid "Order not set."
+msgstr "سفارش تنظیم نشده"
+
+#: src/Controller/Front/OrderController.php:111
+msgid "It not your order."
+msgstr "این سفارش شما نیست"
+
+#: src/Controller/Front/OrderController.php:116
+msgid "This order not pay"
+msgstr "این سفارش پرداخت نشده است"
+
+#: src/Controller/Front/OrderController.php:122
+msgid "This is old order and you pay it before"
+msgstr "این یک سفارش قدیمی است و شما قبلا آن را پرداخت کرده اید"
+
+#: src/Controller/Front/OrderController.php:147
+msgid ""
+"Your bought plan need manual setup by admin, we will work on it and after "
+"finish setup make contact to you"
+msgstr ""
+"پلن خریداری شده توسط شما نیازمند راه اندازی دستی توسط مدیر سیستم است، ما در "
+"حال راه اندازی آن هستیم و بعد از راه اندازی با شما تماس میگیریم."
+
+#: src/Controller/Front/OrderController.php:151
+#, php-format
+msgid ""
+"We active your user account access on <strong>%s</strong> group / role, Now "
+"you can use all new features"
+msgstr ""
+"ما دسترسی کاربری شما را در گروه <strong>%s</strong> فعال کردیم، شما میتوانید "
+"از تمام امکانات جدید یاین دسترسی استفاده نمایید."
+
+#: src/Form/CategoryForm.php:46 src/Form/PlansForm.php:48
+#: template/admin/category-index.phtml:12 template/admin/plans-index.phtml:12
+msgid "Title"
+msgstr "عنوان"
+
+#: src/Form/CategoryForm.php:59 src/Form/PlansForm.php:85
+msgid "Status"
+msgstr "وضعیت"
+
+#: src/Form/CategoryForm.php:61 src/Form/PlansForm.php:87
+msgid "Published"
+msgstr "منتشر شده"
+
+#: src/Form/CategoryForm.php:62 src/Form/PlansForm.php:88
+msgid "Pending review"
+msgstr "در انتظار تایید"
+
+#: src/Form/CategoryForm.php:63 src/Form/PlansForm.php:89
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: src/Form/CategoryForm.php:64 src/Form/PlansForm.php:90
+msgid "Private"
+msgstr "خصوصی"
+
+#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:348
+msgid "Submit"
+msgstr "ارسال"
+
+#: src/Form/Element/Type.php:26
+msgid "Manual"
+msgstr "دستی"
+
+#: src/Form/Element/Type.php:34
+#, php-format
+msgid "Add role : %s"
+msgstr "اختصاص نقش : %s"
+
+#: src/Form/PlansForm.php:61
+msgid "Type"
+msgstr "نوع"
+
+#: src/Form/PlansForm.php:75
+msgid "Category"
+msgstr "شاخه"
+
+#: src/Form/PlansForm.php:101
+msgid "Order view"
+msgstr "نمایش سفارش"
+
+#: src/Form/PlansForm.php:114
+msgid "Price options"
+msgstr "گزینه های قیمت"
+
+#: src/Form/PlansForm.php:121
+msgid "Price"
+msgstr "قیمت"
+
+#: src/Form/PlansForm.php:133
+msgid "Vat"
+msgstr "مالیات"
+
+#: src/Form/PlansForm.php:137
+msgid "Please put vat as true price or leave it empty for set 0"
+msgstr ""
+"لطفا مالیات را به صورت یک قیمت صحیح وارد فرمایید یا آن را خالی رهاکنید تا ۰ "
+"تنظیم شود"
+
+#: src/Form/PlansForm.php:146
+msgid "Period"
+msgstr "دوره"
+
+#: src/Form/PlansForm.php:177
+msgid "Description options"
+msgstr "توضیحات"
+
+#: src/Form/PlansForm.php:184
+msgid "Description 1"
+msgstr "توضیحات ۱"
+
+#: src/Form/PlansForm.php:195
+msgid "Description 2"
+msgstr "توضیحات ۲"
+
+#: src/Form/PlansForm.php:206
+msgid "Description 3"
+msgstr "توضیحات ۳"
+
+#: src/Form/PlansForm.php:217
+msgid "Description 4"
+msgstr "توضیحات ۴"
+
+#: src/Form/PlansForm.php:228
+msgid "Description 5"
+msgstr "توضیحات ۵"
+
+#: src/Form/PlansForm.php:239
+msgid "Description 6"
+msgstr "توضیحات ۶"
+
+#: src/Form/PlansForm.php:250
+msgid "Description 7"
+msgstr "توضیحات ۷"
+
+#: src/Form/PlansForm.php:261
+msgid "Description 8"
+msgstr "توضیحات ۸"
+
+#: src/Form/PlansForm.php:272
+msgid "Description 9"
+msgstr "توضیحات ۹"
+
+#: src/Form/PlansForm.php:283
+msgid "Description 10"
+msgstr "توضیحات ۱۰"
+
+#: src/Form/PlansForm.php:296
+msgid "Design options"
+msgstr "گزینه های طراحی"
+
+#: src/Form/PlansForm.php:303
+msgid "Icon"
+msgstr "آیمن"
+
+#: src/Form/PlansForm.php:307
+msgid "Use fontawesome.io icons, and set icon name like fa-home"
+msgstr ""
+"استفاده از آیکن های fontawesome.io، نام آیکن را تنظیم نمایید ، مثال : fa-home"
+
+#: src/Form/PlansForm.php:315
+msgid "Color"
+msgstr "رنگ"
+
+#: src/Form/PlansForm.php:317
+msgid "Red"
+msgstr "Red"
+
+#: src/Form/PlansForm.php:318
+msgid "Pink"
+msgstr "Pink"
+
+#: src/Form/PlansForm.php:319
+msgid "Purple"
+msgstr "Purple"
+
+#: src/Form/PlansForm.php:320
+msgid "Deep Purple"
+msgstr "Deep Purple"
+
+#: src/Form/PlansForm.php:321
+msgid "Indigo"
+msgstr "Indigo"
+
+#: src/Form/PlansForm.php:322
+msgid "Blue"
+msgstr "Blue"
+
+#: src/Form/PlansForm.php:323
+msgid "Light Blue"
+msgstr "Light Blue"
+
+#: src/Form/PlansForm.php:324
+msgid "Cyan"
+msgstr "Cyan"
+
+#: src/Form/PlansForm.php:325
+msgid "Teal"
+msgstr "Teal"
+
+#: src/Form/PlansForm.php:326
+msgid "Green"
+msgstr "Green"
+
+#: src/Form/PlansForm.php:327
+msgid "Light Green"
+msgstr "Light Green"
+
+#: src/Form/PlansForm.php:328
+msgid "Lime"
+msgstr "Lime"
+
+#: src/Form/PlansForm.php:329
+msgid "Yellow"
+msgstr "Yellow"
+
+#: src/Form/PlansForm.php:330
+msgid "Amber"
+msgstr "Amber"
+
+#: src/Form/PlansForm.php:331
+msgid "Orange"
+msgstr "Orange"
+
+#: src/Form/PlansForm.php:332
+msgid "Deep Orange"
+msgstr "Deep Orange"
+
+#: src/Form/PlansForm.php:333
+msgid "Brown"
+msgstr "Brown"
+
+#: src/Form/PlansForm.php:334
+msgid "Grey"
+msgstr "Grey"
+
+#: src/Form/PlansForm.php:335
+msgid "Blue Grey"
+msgstr "Blue Grey"
+
+#: src/Form/PlansForm.php:336
+msgid "Black"
+msgstr "Black"
+
+#: src/Form/PlansForm.php:340
+msgid "Use google design standard"
+msgstr "از استاندارد طراحی متریال دیزاین گوگل استفاده می شود"
+
+#: template/admin/category-index.phtml:8
+msgid "List of all categories"
+msgstr "فهرست تمام شاخه ها"
+
+#: template/admin/category-index.phtml:11 template/admin/order-index.phtml:6
+#: template/admin/plans-index.phtml:11
+msgid "ID"
+msgstr "شناسه"
+
+#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:13
+msgid "Action"
+msgstr "عملکرد"
+
+#: template/admin/category-index.phtml:29
+#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:29
+#: template/admin/plans-index.phtml:31
+msgid "Edit"
+msgstr "ویرایش"
+
+#: template/admin/order-index.phtml:3
+msgid "List of all orders"
+msgstr "فهرست تمام سفارش ها"
+
+#: template/admin/order-index.phtml:7
+msgid "Name"
+msgstr "نام"
+
+#: template/admin/order-index.phtml:8
+msgid "Plan"
+msgstr "پلن"
+
+#: template/admin/order-index.phtml:34 template/admin/order-index.phtml:56
+msgid "Close"
+msgstr "بستن"
+
+#: template/admin/plans-index.phtml:8
+msgid "List of all plans"
+msgstr "فهرست پلن ها"
+
+#: template/front/index-index.phtml:79 template/front/index-index.phtml:171
+msgid "Order"
+msgstr "سفارش"
+
+#: template/front/index-index.phtml:98
+msgid "Main plans"
+msgstr "پلن های اصلی"
+
+#: template/front/order-finish.phtml:4
+msgid "Finish order payment"
+msgstr "پرداخت سفارش تکمیل شده است"
+
+#: template/front/order-finish.phtml:10
+#, php-format
+msgid ""
+"You pay your order at <strong>%s</strong> by <strong>%s</strong> gateway And "
+"your order id is <strong>%s</strong>"
+msgstr ""
+"شما سفارش خود را در تاریخ <strong>%s</strong> و توسط <strong>%s</"
+"strong>پرداخت کرده اید و شماره سفارش شما <strong>%s</strong> است"
+
+#: template/front/order-finish.phtml:15
+msgid "Your select plan"
+msgstr "پلن انتخابی شما"
+
+#: template/front/order-finish.phtml:64 template/front/order-finish.phtml:65
+msgid "Order link"
+msgstr "لینک به سفارش"
+
+#: template/front/order-finish.phtml:66 template/front/order-finish.phtml:67
+msgid "User panel"
+msgstr "پنل کاربر"
+
+#: template/front/order-finish.phtml:68
+msgid "Shop index"
+msgstr "فهرست پلن ها"
+
+#: template/front/order-finish.phtml:69
+msgid "Plan list"
+msgstr "فهرست پلن ها"

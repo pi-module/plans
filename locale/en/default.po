@@ -1,0 +1,406 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: support\n"
+"POT-Creation-Date: 2016-01-15 13:35+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Api/Plans.php:116 src/Form/PlansForm.php:148
+msgid "Unlimited"
+msgstr ""
+
+#: src/Api/Plans.php:120 src/Form/PlansForm.php:149
+msgid "15 days"
+msgstr ""
+
+#: src/Api/Plans.php:124 src/Form/PlansForm.php:150
+msgid "1 month"
+msgstr ""
+
+#: src/Api/Plans.php:128 src/Form/PlansForm.php:151
+msgid "2 months"
+msgstr ""
+
+#: src/Api/Plans.php:132 src/Form/PlansForm.php:152
+msgid "3 months"
+msgstr ""
+
+#: src/Api/Plans.php:136 src/Form/PlansForm.php:153
+msgid "4 months"
+msgstr ""
+
+#: src/Api/Plans.php:140 src/Form/PlansForm.php:154
+msgid "5 months"
+msgstr ""
+
+#: src/Api/Plans.php:144 src/Form/PlansForm.php:155
+msgid "6 months"
+msgstr ""
+
+#: src/Api/Plans.php:148 src/Form/PlansForm.php:156
+msgid "12 months"
+msgstr ""
+
+#: src/Controller/Admin/CategoryController.php:60
+msgid "Category data saved successfully."
+msgstr ""
+
+#: src/Controller/Admin/CategoryController.php:72
+#: template/admin/category-index.phtml:4 template/admin/category-index.phtml:6
+msgid "Add category"
+msgstr ""
+
+#: src/Controller/Admin/PlansController.php:119
+msgid "Plan data saved successfully."
+msgstr ""
+
+#: src/Controller/Admin/PlansController.php:146
+#: template/admin/plans-index.phtml:4 template/admin/plans-index.phtml:6
+msgid "Add plan"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:29
+#: src/Controller/Front/OrderController.php:92
+msgid "So sorry, At this moment order is inactive"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:43
+#: src/Controller/Front/OrderController.php:52
+msgid "You need select plan"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:80
+msgid "Order module not installed"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:106
+msgid "Order not set."
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:111
+msgid "It not your order."
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:116
+msgid "This order not pay"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:122
+msgid "This is old order and you pay it before"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:147
+msgid ""
+"Your bought plan need manual setup by admin, we will work on it and after "
+"finish setup make contact to you"
+msgstr ""
+
+#: src/Controller/Front/OrderController.php:151
+#, php-format
+msgid ""
+"We active your user account access on <strong>%s</strong> group / role, Now "
+"you can use all new features"
+msgstr ""
+
+#: src/Form/CategoryForm.php:46 src/Form/PlansForm.php:48
+#: template/admin/category-index.phtml:12 template/admin/plans-index.phtml:12
+msgid "Title"
+msgstr ""
+
+#: src/Form/CategoryForm.php:59 src/Form/PlansForm.php:85
+msgid "Status"
+msgstr ""
+
+#: src/Form/CategoryForm.php:61 src/Form/PlansForm.php:87
+msgid "Published"
+msgstr ""
+
+#: src/Form/CategoryForm.php:62 src/Form/PlansForm.php:88
+msgid "Pending review"
+msgstr ""
+
+#: src/Form/CategoryForm.php:63 src/Form/PlansForm.php:89
+msgid "Draft"
+msgstr ""
+
+#: src/Form/CategoryForm.php:64 src/Form/PlansForm.php:90
+msgid "Private"
+msgstr ""
+
+#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:348
+msgid "Submit"
+msgstr ""
+
+#: src/Form/Element/Type.php:26
+msgid "Manual"
+msgstr ""
+
+#: src/Form/Element/Type.php:34
+#, php-format
+msgid "Add role : %s"
+msgstr ""
+
+#: src/Form/PlansForm.php:61
+msgid "Type"
+msgstr ""
+
+#: src/Form/PlansForm.php:75
+msgid "Category"
+msgstr ""
+
+#: src/Form/PlansForm.php:101
+msgid "Order view"
+msgstr ""
+
+#: src/Form/PlansForm.php:114
+msgid "Price options"
+msgstr ""
+
+#: src/Form/PlansForm.php:121
+msgid "Price"
+msgstr ""
+
+#: src/Form/PlansForm.php:133
+msgid "Vat"
+msgstr ""
+
+#: src/Form/PlansForm.php:137
+msgid "Please put vat as true price or leave it empty for set 0"
+msgstr ""
+
+#: src/Form/PlansForm.php:146
+msgid "Period"
+msgstr ""
+
+#: src/Form/PlansForm.php:177
+msgid "Description options"
+msgstr ""
+
+#: src/Form/PlansForm.php:184
+msgid "Description 1"
+msgstr ""
+
+#: src/Form/PlansForm.php:195
+msgid "Description 2"
+msgstr ""
+
+#: src/Form/PlansForm.php:206
+msgid "Description 3"
+msgstr ""
+
+#: src/Form/PlansForm.php:217
+msgid "Description 4"
+msgstr ""
+
+#: src/Form/PlansForm.php:228
+msgid "Description 5"
+msgstr ""
+
+#: src/Form/PlansForm.php:239
+msgid "Description 6"
+msgstr ""
+
+#: src/Form/PlansForm.php:250
+msgid "Description 7"
+msgstr ""
+
+#: src/Form/PlansForm.php:261
+msgid "Description 8"
+msgstr ""
+
+#: src/Form/PlansForm.php:272
+msgid "Description 9"
+msgstr ""
+
+#: src/Form/PlansForm.php:283
+msgid "Description 10"
+msgstr ""
+
+#: src/Form/PlansForm.php:296
+msgid "Design options"
+msgstr ""
+
+#: src/Form/PlansForm.php:303
+msgid "Icon"
+msgstr ""
+
+#: src/Form/PlansForm.php:307
+msgid "Use fontawesome.io icons, and set icon name like fa-home"
+msgstr ""
+
+#: src/Form/PlansForm.php:315
+msgid "Color"
+msgstr ""
+
+#: src/Form/PlansForm.php:317
+msgid "Red"
+msgstr ""
+
+#: src/Form/PlansForm.php:318
+msgid "Pink"
+msgstr ""
+
+#: src/Form/PlansForm.php:319
+msgid "Purple"
+msgstr ""
+
+#: src/Form/PlansForm.php:320
+msgid "Deep Purple"
+msgstr ""
+
+#: src/Form/PlansForm.php:321
+msgid "Indigo"
+msgstr ""
+
+#: src/Form/PlansForm.php:322
+msgid "Blue"
+msgstr ""
+
+#: src/Form/PlansForm.php:323
+msgid "Light Blue"
+msgstr ""
+
+#: src/Form/PlansForm.php:324
+msgid "Cyan"
+msgstr ""
+
+#: src/Form/PlansForm.php:325
+msgid "Teal"
+msgstr ""
+
+#: src/Form/PlansForm.php:326
+msgid "Green"
+msgstr ""
+
+#: src/Form/PlansForm.php:327
+msgid "Light Green"
+msgstr ""
+
+#: src/Form/PlansForm.php:328
+msgid "Lime"
+msgstr ""
+
+#: src/Form/PlansForm.php:329
+msgid "Yellow"
+msgstr ""
+
+#: src/Form/PlansForm.php:330
+msgid "Amber"
+msgstr ""
+
+#: src/Form/PlansForm.php:331
+msgid "Orange"
+msgstr ""
+
+#: src/Form/PlansForm.php:332
+msgid "Deep Orange"
+msgstr ""
+
+#: src/Form/PlansForm.php:333
+msgid "Brown"
+msgstr ""
+
+#: src/Form/PlansForm.php:334
+msgid "Grey"
+msgstr ""
+
+#: src/Form/PlansForm.php:335
+msgid "Blue Grey"
+msgstr ""
+
+#: src/Form/PlansForm.php:336
+msgid "Black"
+msgstr ""
+
+#: src/Form/PlansForm.php:340
+msgid "Use google design standard"
+msgstr ""
+
+#: template/admin/category-index.phtml:8
+msgid "List of all categories"
+msgstr ""
+
+#: template/admin/category-index.phtml:11 template/admin/order-index.phtml:6
+#: template/admin/plans-index.phtml:11
+msgid "ID"
+msgstr ""
+
+#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:13
+msgid "Action"
+msgstr ""
+
+#: template/admin/category-index.phtml:29
+#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:29
+#: template/admin/plans-index.phtml:31
+msgid "Edit"
+msgstr ""
+
+#: template/admin/order-index.phtml:3
+msgid "List of all orders"
+msgstr ""
+
+#: template/admin/order-index.phtml:7
+msgid "Name"
+msgstr ""
+
+#: template/admin/order-index.phtml:8
+msgid "Plan"
+msgstr ""
+
+#: template/admin/order-index.phtml:34 template/admin/order-index.phtml:56
+msgid "Close"
+msgstr ""
+
+#: template/admin/plans-index.phtml:8
+msgid "List of all plans"
+msgstr ""
+
+#: template/front/index-index.phtml:79 template/front/index-index.phtml:171
+msgid "Order"
+msgstr ""
+
+#: template/front/index-index.phtml:98
+msgid "Main plans"
+msgstr ""
+
+#: template/front/order-finish.phtml:4
+msgid "Finish order payment"
+msgstr ""
+
+#: template/front/order-finish.phtml:10
+#, php-format
+msgid ""
+"You pay your order at <strong>%s</strong> by <strong>%s</strong> gateway And "
+"your order id is <strong>%s</strong>"
+msgstr ""
+
+#: template/front/order-finish.phtml:15
+msgid "Your select plan"
+msgstr ""
+
+#: template/front/order-finish.phtml:64 template/front/order-finish.phtml:65
+msgid "Order link"
+msgstr ""
+
+#: template/front/order-finish.phtml:66 template/front/order-finish.phtml:67
+msgid "User panel"
+msgstr ""
+
+#: template/front/order-finish.phtml:68
+msgid "Shop index"
+msgstr ""
+
+#: template/front/order-finish.phtml:69
+msgid "Plan list"
+msgstr ""

@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: support\n"
+"POT-Creation-Date: 2016-01-15 13:36+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _a;_t\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: config/config.php:16
+msgid "Admin"
+msgstr "مدیریت"
+
+#: config/config.php:20
+msgid "View"
+msgstr "نمایش"
+
+#: config/config.php:24 config/navigation.php:36 config/page.php:27
+#: config/permission.php:25
+msgid "Order"
+msgstr "سفارش"
+
+#: config/config.php:32
+msgid "Perpage"
+msgstr "تعداد در صفحه"
+
+#: config/config.php:40
+msgid "Plans view type"
+msgstr "نوع نمایش پلن ها"
+
+#: config/config.php:45
+msgid "List"
+msgstr "فهرست"
+
+#: config/config.php:46
+msgid "Tab"
+msgstr "تب"
+
+#: config/config.php:57
+msgid "Order is active ?"
+msgstr "سفارش فعال باشد؟"
+
+#: config/config.php:66
+msgid "Title for homepage"
+msgstr "عنوان برای صفحه اول"
+
+#: config/config.php:70
+msgid "List of our website plans"
+msgstr "فهرست پلن های وب سایت ما"
+
+#: config/config.php:74
+msgid "Description for homepage"
+msgstr "توضیحات صفحه اول"
+
+#: config/module.php:16 config/navigation.php:16 config/page.php:17
+#: config/permission.php:17
+msgid "Plans"
+msgstr "پلن ها"
+
+#: config/module.php:17
+msgid "Manage website plans"
+msgstr "مدیریت پلن های وب سایت"
+
+#: config/navigation.php:26 config/page.php:22 config/permission.php:21
+msgid "Category"
+msgstr "شاخه"
+
+#: config/page.php:35
+msgid "Index page"
+msgstr "صفحه اصلی"
