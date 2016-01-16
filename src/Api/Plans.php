@@ -72,12 +72,24 @@ class Plans extends AbstractApi
         foreach ($rowset as $row) {
             $category[$row->id] = $row->toArray();
             $category[$row->id]['plans'] = array();
+            $category[$row->id]['active'] = 0;
         }
         // Add plans to category
         foreach ($plans as $plan) {
             $category[$plan['category']]['plans'][$plan['id']] = $plan;
         }
-        return $category;
+
+        $categories = array();
+        foreach ($category as $singleCategory) {
+            if (!empty($singleCategory['plans'])) {
+                $categories[$singleCategory['id']] = $singleCategory;
+            }
+        }
+
+        $activeID = min(array_keys($categories));
+        $categories[$activeID]['active'] = 1;
+
+        return $categories;
     }
 
     public function canonizePlan($plan)
