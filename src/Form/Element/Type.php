@@ -23,8 +23,9 @@ class Type extends Select
     public function getValueOptions()
     {
         if (empty($this->valueOptions)) {
-            $this->valueOptions = array('manual' => __('Manual'));
-
+            // Set manual action
+            $this->valueOptions['manual'] = __('Manual');
+            // Set role action
             $roles = Pi::service('registry')->role->read('front');
             unset($roles['member']);
             unset($roles['webmaster']);
@@ -34,6 +35,16 @@ class Type extends Select
                     $this->valueOptions[$key] = sprintf(__('Add role : %s'), $role['title']);
                 }
             }
+            // Set credit action
+            if (Pi::service('module')->isActive('user')) {
+                $field = Pi::registry('field', 'user')->read();
+                $field = array_keys($field);
+                if (in_array('credit', $field)) {
+                    $this->valueOptions['credit'] = __('Update user credit');
+                }
+            }
+            // Set module action
+            /* ToDo */
         }
         return $this->valueOptions;
     }

@@ -160,6 +160,24 @@ class Plans extends AbstractApi
                 $plan['time_period_view'] = __('12 months');
                 break;
         }
+        // Set type view
+        switch ($plan['type']) {
+            case 'manual':
+                $plan['type_view'] = __('Manual');
+                break;
+
+            case 'role':
+                $plan['type_view'] = __('Role');
+                break;
+
+            case 'credit':
+                $plan['type_view'] = __('Credit');
+                break;
+
+            case 'module':
+                $plan['type_view'] = __('Module');
+                break;
+        }
         // return item
         return $plan;
     }

@@ -1,0 +1,49 @@
+<div class="<?php echo $class; ?>">
+    <div class="<?php echo $this->escape($plan['color']); ?>">
+        <ul class="pricing">
+            <li>
+                <i class="fa <?php echo $this->escape($plan['icon']); ?>"></i>
+                <big><?php echo $this->escape($plan['title']); ?></big>
+            </li>
+            <?php if (!empty($plan['description_1'])) { ?>
+                <li><?php echo $this->escape($plan['description_1']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_2'])) { ?>
+                <li><?php echo $this->escape($plan['description_2']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_3'])) { ?>
+                <li><?php echo $this->escape($plan['description_3']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_4'])) { ?>
+                <li><?php echo $this->escape($plan['description_4']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_5'])) { ?>
+                <li><?php echo $this->escape($plan['description_5']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_6'])) { ?>
+                <li><?php echo $this->escape($plan['description_6']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_7'])) { ?>
+                <li><?php echo $this->escape($plan['description_7']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_8'])) { ?>
+                <li><?php echo $this->escape($plan['description_8']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_9'])) { ?>
+                <li><?php echo $this->escape($plan['description_9']); ?></li>
+            <?php } ?>
+            <?php if (!empty($plan['description_10'])) { ?>
+                <li><?php echo $this->escape($plan['description_10']); ?></li>
+            <?php } ?>
+            <li>
+                <h3><?php echo $this->escape($plan['price_view']); ?></h3>
+                <span><?php echo $this->escape($plan['time_period_view']); ?></span>
+            </li>
+            <li>
+                <a href="<?php echo $this->escape($plan['orderUrl']); ?>" class="order-button" id="product1-order-button">
+                    <?php _e('Order'); ?>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

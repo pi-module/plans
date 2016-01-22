@@ -30,7 +30,7 @@ class PlansController extends ActionController
         $rowset = $this->getModel('plans')->selectWith($select);
         // Make list
         foreach ($rowset as $row) {
-            $list[$row->id] = $row->toArray();
+            $list[$row->id] = Pi::api('plans', 'plans')->canonizePlan($row);
         }
         // Set view
         $this->view()->setTemplate('plans-index');
@@ -69,6 +69,12 @@ class PlansController extends ActionController
                         'action' => 'manual',
                     );
                     $values['type'] = 'manual';
+                } elseif ($values['type'] == 'credit') {
+                    $action = array(
+                        'action' => 'automatic',
+                        'type' => 'credit',
+                    );
+                    $values['type'] = 'credit';
                 } elseif(!empty($roleList) && in_array($values['type'], $roleList)) {
                     $action = array(
                         'action' => 'automatic',

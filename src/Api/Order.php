@@ -67,6 +67,27 @@ class Order extends AbstractApi
                     )));
                     break;
 
+                case 'credit':
+                    // Check user module
+                    if (Pi::service('module')->isActive('user')) {
+                        // Get user
+                        $user = Pi::user()->get($order['uid'], array('id', 'credit'));
+                        // Update user credit
+                        $credit = $user['credit'] + $plan['price'];
+                        Pi::model('profile', 'user')->update(
+                            array('credit' => $credit),
+                            array('uid' => $order['uid'])
+                        );
+                    }
+                    // Set url
+                    $url = Pi::url(Pi::service('url')->assemble('plans', array(
+                        'module' => $this->getModule(),
+                        'controller' => 'order',
+                        'action' => 'finish',
+                        'id' => $row->id,
+                    )));
+                    break;
+
                 case 'role':
                     // Update role
                     Pi::service('user')->setRole($order['uid'], $plan['role']);
