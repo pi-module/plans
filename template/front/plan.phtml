@@ -35,6 +35,14 @@
             <?php if (!empty($plan['description_10'])) { ?>
                 <li><?php echo $this->escape($plan['description_10']); ?></li>
             <?php } ?>
+            <?php if (!empty($plan['link_title']) && !empty($plan['link_url'])) { ?>
+                <li>
+                    <a target="_blank" title="<?php echo $this->escape($plan['link_title']); ?>" href="<?php echo $this->escape($plan['link_url']); ?>">
+                        <i class="fa fa-share-square-o"></i>
+                        <?php echo $this->escape($plan['link_title']); ?>
+                    </a>
+                </li>
+            <?php } ?>
             <li>
                 <h3><?php echo $this->escape($plan['price_view']); ?></h3>
                 <span><?php echo $this->escape($plan['time_period_view']); ?></span>

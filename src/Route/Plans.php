@@ -53,6 +53,12 @@ class Plans extends Standard
         // Make Match
         if (isset($matches['controller'])) {
             switch ($matches['controller']) {
+                case 'index':
+                    if (isset($parts[0]) && $parts[0] == 'category') {
+                        $matches['category'] = intval($parts[1]);
+                    }
+                    break;
+
                 case 'order':
                     if (isset($parts[1]) && $parts[1] == 'add') {
                         $matches['action'] = 'add';
@@ -118,6 +124,11 @@ class Plans extends Standard
         // Set id
         if (isset($mergedParams['id'])) {
             $url['id'] = $mergedParams['id'];
+        }
+
+        // Set category
+        if (isset($mergedParams['category'])) {
+            $url['category'] = 'category' . $this->paramDelimiter .$mergedParams['category'];
         }
 
         // Make url

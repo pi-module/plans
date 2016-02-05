@@ -103,7 +103,11 @@ class Plans extends AbstractApi
         $setting = Json::decode($plan['setting'], true);
         $plan = array_merge($plan, $setting['description'], $setting['action'], $setting['design']);
         // Set price
-        $plan['price_view'] = Pi::api('api', 'plans')->viewPrice($plan['price']);
+        if ($plan['price'] > 0) {
+            $plan['price_view'] = Pi::api('api', 'plans')->viewPrice($plan['price']);
+        } else {
+            $plan['price_view'] = __('Free');
+        }
         // Set vat
         $plan['vat_view'] = Pi::api('api', 'plans')->viewPrice($plan['vat']);
         // Set order url

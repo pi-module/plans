@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: support\n"
-"POT-Creation-Date: 2016-01-15 13:35+0330\n"
+"POT-Creation-Date: 2016-02-05 21:19+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,41 +16,61 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: src/Api/Plans.php:116 src/Form/PlansForm.php:148
+#: src/Api/Plans.php:109
+msgid "Free"
+msgstr "رایگان"
+
+#: src/Api/Plans.php:132 src/Form/PlansForm.php:148
 msgid "Unlimited"
 msgstr "دائمی"
 
-#: src/Api/Plans.php:120 src/Form/PlansForm.php:149
+#: src/Api/Plans.php:136 src/Form/PlansForm.php:149
 msgid "15 days"
 msgstr "۱۵ روزه"
 
-#: src/Api/Plans.php:124 src/Form/PlansForm.php:150
+#: src/Api/Plans.php:140 src/Form/PlansForm.php:150
 msgid "1 month"
 msgstr "۱ ماه"
 
-#: src/Api/Plans.php:128 src/Form/PlansForm.php:151
+#: src/Api/Plans.php:144 src/Form/PlansForm.php:151
 msgid "2 months"
 msgstr "۲ ماه"
 
-#: src/Api/Plans.php:132 src/Form/PlansForm.php:152
+#: src/Api/Plans.php:148 src/Form/PlansForm.php:152
 msgid "3 months"
 msgstr "۳ ماه"
 
-#: src/Api/Plans.php:136 src/Form/PlansForm.php:153
+#: src/Api/Plans.php:152 src/Form/PlansForm.php:153
 msgid "4 months"
 msgstr "۴ ماه"
 
-#: src/Api/Plans.php:140 src/Form/PlansForm.php:154
+#: src/Api/Plans.php:156 src/Form/PlansForm.php:154
 msgid "5 months"
 msgstr "۵ ماه"
 
-#: src/Api/Plans.php:144 src/Form/PlansForm.php:155
+#: src/Api/Plans.php:160 src/Form/PlansForm.php:155
 msgid "6 months"
 msgstr "۶ ماه"
 
-#: src/Api/Plans.php:148 src/Form/PlansForm.php:156
+#: src/Api/Plans.php:164 src/Form/PlansForm.php:156
 msgid "12 months"
 msgstr "۱۲ ماه"
+
+#: src/Api/Plans.php:170 src/Form/Element/Type.php:27
+msgid "Manual"
+msgstr "دستی"
+
+#: src/Api/Plans.php:174
+msgid "Role"
+msgstr "تقش"
+
+#: src/Api/Plans.php:178
+msgid "Credit"
+msgstr "اعتبار"
+
+#: src/Api/Plans.php:182
+msgid "Module"
+msgstr "ماژول"
 
 #: src/Controller/Admin/CategoryController.php:60
 msgid "Category data saved successfully."
@@ -61,11 +81,11 @@ msgstr "اطلاعات شاخه به موفقیت ذخیره شد"
 msgid "Add category"
 msgstr "شاخه جدید"
 
-#: src/Controller/Admin/PlansController.php:119
+#: src/Controller/Admin/PlansController.php:127
 msgid "Plan data saved successfully."
 msgstr "اطلاعات پلن با موفقیت ذخیره شد"
 
-#: src/Controller/Admin/PlansController.php:146
+#: src/Controller/Admin/PlansController.php:154
 #: template/admin/plans-index.phtml:4 template/admin/plans-index.phtml:6
 msgid "Add plan"
 msgstr "پلن جدید"
@@ -142,20 +162,20 @@ msgstr "پیش نویس"
 msgid "Private"
 msgstr "خصوصی"
 
-#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:348
+#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:377
 msgid "Submit"
 msgstr "ارسال"
 
-#: src/Form/Element/Type.php:26
-msgid "Manual"
-msgstr "دستی"
-
-#: src/Form/Element/Type.php:34
+#: src/Form/Element/Type.php:35
 #, php-format
 msgid "Add role : %s"
 msgstr "اختصاص نقش : %s"
 
-#: src/Form/PlansForm.php:61
+#: src/Form/Element/Type.php:43
+msgid "Update user credit"
+msgstr "به روز رسانی اعتبار مالی ( کریدیت ) کاربر"
+
+#: src/Form/PlansForm.php:61 template/admin/plans-index.phtml:13
 msgid "Type"
 msgstr "نوع"
 
@@ -233,104 +253,116 @@ msgstr "توضیحات ۹"
 msgid "Description 10"
 msgstr "توضیحات ۱۰"
 
-#: src/Form/PlansForm.php:296
+#: src/Form/PlansForm.php:295
+msgid "Extra link"
+msgstr "لینک اضافی"
+
+#: src/Form/PlansForm.php:302
+msgid "Link title"
+msgstr "عنوان لینک"
+
+#: src/Form/PlansForm.php:313
+msgid "Link url"
+msgstr "آدرس لینک"
+
+#: src/Form/PlansForm.php:325
 msgid "Design options"
 msgstr "گزینه های طراحی"
 
-#: src/Form/PlansForm.php:303
+#: src/Form/PlansForm.php:332
 msgid "Icon"
 msgstr "آیمن"
 
-#: src/Form/PlansForm.php:307
+#: src/Form/PlansForm.php:336
 msgid "Use fontawesome.io icons, and set icon name like fa-home"
 msgstr ""
 "استفاده از آیکن های fontawesome.io، نام آیکن را تنظیم نمایید ، مثال : fa-home"
 
-#: src/Form/PlansForm.php:315
+#: src/Form/PlansForm.php:344
 msgid "Color"
 msgstr "رنگ"
 
-#: src/Form/PlansForm.php:317
+#: src/Form/PlansForm.php:346
 msgid "Red"
 msgstr "Red"
 
-#: src/Form/PlansForm.php:318
+#: src/Form/PlansForm.php:347
 msgid "Pink"
 msgstr "Pink"
 
-#: src/Form/PlansForm.php:319
+#: src/Form/PlansForm.php:348
 msgid "Purple"
 msgstr "Purple"
 
-#: src/Form/PlansForm.php:320
+#: src/Form/PlansForm.php:349
 msgid "Deep Purple"
 msgstr "Deep Purple"
 
-#: src/Form/PlansForm.php:321
+#: src/Form/PlansForm.php:350
 msgid "Indigo"
 msgstr "Indigo"
 
-#: src/Form/PlansForm.php:322
+#: src/Form/PlansForm.php:351
 msgid "Blue"
 msgstr "Blue"
 
-#: src/Form/PlansForm.php:323
+#: src/Form/PlansForm.php:352
 msgid "Light Blue"
 msgstr "Light Blue"
 
-#: src/Form/PlansForm.php:324
+#: src/Form/PlansForm.php:353
 msgid "Cyan"
 msgstr "Cyan"
 
-#: src/Form/PlansForm.php:325
+#: src/Form/PlansForm.php:354
 msgid "Teal"
 msgstr "Teal"
 
-#: src/Form/PlansForm.php:326
+#: src/Form/PlansForm.php:355
 msgid "Green"
 msgstr "Green"
 
-#: src/Form/PlansForm.php:327
+#: src/Form/PlansForm.php:356
 msgid "Light Green"
 msgstr "Light Green"
 
-#: src/Form/PlansForm.php:328
+#: src/Form/PlansForm.php:357
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Form/PlansForm.php:329
+#: src/Form/PlansForm.php:358
 msgid "Yellow"
 msgstr "Yellow"
 
-#: src/Form/PlansForm.php:330
+#: src/Form/PlansForm.php:359
 msgid "Amber"
 msgstr "Amber"
 
-#: src/Form/PlansForm.php:331
+#: src/Form/PlansForm.php:360
 msgid "Orange"
 msgstr "Orange"
 
-#: src/Form/PlansForm.php:332
+#: src/Form/PlansForm.php:361
 msgid "Deep Orange"
 msgstr "Deep Orange"
 
-#: src/Form/PlansForm.php:333
+#: src/Form/PlansForm.php:362
 msgid "Brown"
 msgstr "Brown"
 
-#: src/Form/PlansForm.php:334
+#: src/Form/PlansForm.php:363
 msgid "Grey"
 msgstr "Grey"
 
-#: src/Form/PlansForm.php:335
+#: src/Form/PlansForm.php:364
 msgid "Blue Grey"
 msgstr "Blue Grey"
 
-#: src/Form/PlansForm.php:336
+#: src/Form/PlansForm.php:365
 msgid "Black"
 msgstr "Black"
 
-#: src/Form/PlansForm.php:340
+#: src/Form/PlansForm.php:369
 msgid "Use google design standard"
 msgstr "از استاندارد طراحی متریال دیزاین گوگل استفاده می شود"
 
@@ -343,13 +375,13 @@ msgstr "فهرست تمام شاخه ها"
 msgid "ID"
 msgstr "شناسه"
 
-#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:13
+#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:14
 msgid "Action"
 msgstr "عملکرد"
 
 #: template/admin/category-index.phtml:29
-#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:29
-#: template/admin/plans-index.phtml:31
+#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:31
+#: template/admin/plans-index.phtml:33
 msgid "Edit"
 msgstr "ویرایش"
 
@@ -373,11 +405,7 @@ msgstr "بستن"
 msgid "List of all plans"
 msgstr "فهرست پلن ها"
 
-#: template/front/index-index.phtml:79 template/front/index-index.phtml:171
-msgid "Order"
-msgstr "سفارش"
-
-#: template/front/index-index.phtml:98
+#: template/front/index-index.phtml:49
 msgid "Main plans"
 msgstr "پلن های اصلی"
 
@@ -398,18 +426,22 @@ msgstr ""
 msgid "Your select plan"
 msgstr "پلن انتخابی شما"
 
-#: template/front/order-finish.phtml:64 template/front/order-finish.phtml:65
+#: template/front/order-finish.phtml:23 template/front/order-finish.phtml:24
 msgid "Order link"
 msgstr "لینک به سفارش"
 
-#: template/front/order-finish.phtml:66 template/front/order-finish.phtml:67
+#: template/front/order-finish.phtml:25 template/front/order-finish.phtml:26
 msgid "User panel"
 msgstr "پنل کاربر"
 
-#: template/front/order-finish.phtml:68
+#: template/front/order-finish.phtml:27
 msgid "Shop index"
 msgstr "فهرست پلن ها"
 
-#: template/front/order-finish.phtml:69
+#: template/front/order-finish.phtml:28
 msgid "Plan list"
 msgstr "فهرست پلن ها"
+
+#: template/front/plan.phtml:52
+msgid "Order"
+msgstr "سفارش"

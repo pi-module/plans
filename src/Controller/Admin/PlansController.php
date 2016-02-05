@@ -102,6 +102,8 @@ class PlansController extends ActionController
                     'description_8' => $values['description_8'],
                     'description_9' => $values['description_9'],
                     'description_10' => $values['description_10'],
+                    'link_title' => $values['link_title'],
+                    'link_url' => $values['link_url'],
                 );
                 $setting['design'] = array(
                     'icon' => $values['icon'],

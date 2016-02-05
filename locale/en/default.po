@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: support\n"
-"POT-Creation-Date: 2016-01-15 13:35+0330\n"
+"POT-Creation-Date: 2016-02-05 21:20+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,40 +16,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: src/Api/Plans.php:116 src/Form/PlansForm.php:148
+#: src/Api/Plans.php:109
+msgid "Free"
+msgstr ""
+
+#: src/Api/Plans.php:132 src/Form/PlansForm.php:148
 msgid "Unlimited"
 msgstr ""
 
-#: src/Api/Plans.php:120 src/Form/PlansForm.php:149
+#: src/Api/Plans.php:136 src/Form/PlansForm.php:149
 msgid "15 days"
 msgstr ""
 
-#: src/Api/Plans.php:124 src/Form/PlansForm.php:150
+#: src/Api/Plans.php:140 src/Form/PlansForm.php:150
 msgid "1 month"
 msgstr ""
 
-#: src/Api/Plans.php:128 src/Form/PlansForm.php:151
+#: src/Api/Plans.php:144 src/Form/PlansForm.php:151
 msgid "2 months"
 msgstr ""
 
-#: src/Api/Plans.php:132 src/Form/PlansForm.php:152
+#: src/Api/Plans.php:148 src/Form/PlansForm.php:152
 msgid "3 months"
 msgstr ""
 
-#: src/Api/Plans.php:136 src/Form/PlansForm.php:153
+#: src/Api/Plans.php:152 src/Form/PlansForm.php:153
 msgid "4 months"
 msgstr ""
 
-#: src/Api/Plans.php:140 src/Form/PlansForm.php:154
+#: src/Api/Plans.php:156 src/Form/PlansForm.php:154
 msgid "5 months"
 msgstr ""
 
-#: src/Api/Plans.php:144 src/Form/PlansForm.php:155
+#: src/Api/Plans.php:160 src/Form/PlansForm.php:155
 msgid "6 months"
 msgstr ""
 
-#: src/Api/Plans.php:148 src/Form/PlansForm.php:156
+#: src/Api/Plans.php:164 src/Form/PlansForm.php:156
 msgid "12 months"
+msgstr ""
+
+#: src/Api/Plans.php:170 src/Form/Element/Type.php:27
+msgid "Manual"
+msgstr ""
+
+#: src/Api/Plans.php:174
+msgid "Role"
+msgstr ""
+
+#: src/Api/Plans.php:178
+msgid "Credit"
+msgstr ""
+
+#: src/Api/Plans.php:182
+msgid "Module"
 msgstr ""
 
 #: src/Controller/Admin/CategoryController.php:60
@@ -61,11 +81,11 @@ msgstr ""
 msgid "Add category"
 msgstr ""
 
-#: src/Controller/Admin/PlansController.php:119
+#: src/Controller/Admin/PlansController.php:127
 msgid "Plan data saved successfully."
 msgstr ""
 
-#: src/Controller/Admin/PlansController.php:146
+#: src/Controller/Admin/PlansController.php:154
 #: template/admin/plans-index.phtml:4 template/admin/plans-index.phtml:6
 msgid "Add plan"
 msgstr ""
@@ -138,20 +158,20 @@ msgstr ""
 msgid "Private"
 msgstr ""
 
-#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:348
+#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:377
 msgid "Submit"
 msgstr ""
 
-#: src/Form/Element/Type.php:26
-msgid "Manual"
-msgstr ""
-
-#: src/Form/Element/Type.php:34
+#: src/Form/Element/Type.php:35
 #, php-format
 msgid "Add role : %s"
 msgstr ""
 
-#: src/Form/PlansForm.php:61
+#: src/Form/Element/Type.php:43
+msgid "Update user credit"
+msgstr ""
+
+#: src/Form/PlansForm.php:61 template/admin/plans-index.phtml:13
 msgid "Type"
 msgstr ""
 
@@ -227,103 +247,115 @@ msgstr ""
 msgid "Description 10"
 msgstr ""
 
-#: src/Form/PlansForm.php:296
-msgid "Design options"
+#: src/Form/PlansForm.php:295
+msgid "Extra link"
 msgstr ""
 
-#: src/Form/PlansForm.php:303
-msgid "Icon"
+#: src/Form/PlansForm.php:302
+msgid "Link title"
 msgstr ""
 
-#: src/Form/PlansForm.php:307
-msgid "Use fontawesome.io icons, and set icon name like fa-home"
-msgstr ""
-
-#: src/Form/PlansForm.php:315
-msgid "Color"
-msgstr ""
-
-#: src/Form/PlansForm.php:317
-msgid "Red"
-msgstr ""
-
-#: src/Form/PlansForm.php:318
-msgid "Pink"
-msgstr ""
-
-#: src/Form/PlansForm.php:319
-msgid "Purple"
-msgstr ""
-
-#: src/Form/PlansForm.php:320
-msgid "Deep Purple"
-msgstr ""
-
-#: src/Form/PlansForm.php:321
-msgid "Indigo"
-msgstr ""
-
-#: src/Form/PlansForm.php:322
-msgid "Blue"
-msgstr ""
-
-#: src/Form/PlansForm.php:323
-msgid "Light Blue"
-msgstr ""
-
-#: src/Form/PlansForm.php:324
-msgid "Cyan"
+#: src/Form/PlansForm.php:313
+msgid "Link url"
 msgstr ""
 
 #: src/Form/PlansForm.php:325
-msgid "Teal"
-msgstr ""
-
-#: src/Form/PlansForm.php:326
-msgid "Green"
-msgstr ""
-
-#: src/Form/PlansForm.php:327
-msgid "Light Green"
-msgstr ""
-
-#: src/Form/PlansForm.php:328
-msgid "Lime"
-msgstr ""
-
-#: src/Form/PlansForm.php:329
-msgid "Yellow"
-msgstr ""
-
-#: src/Form/PlansForm.php:330
-msgid "Amber"
-msgstr ""
-
-#: src/Form/PlansForm.php:331
-msgid "Orange"
+msgid "Design options"
 msgstr ""
 
 #: src/Form/PlansForm.php:332
-msgid "Deep Orange"
-msgstr ""
-
-#: src/Form/PlansForm.php:333
-msgid "Brown"
-msgstr ""
-
-#: src/Form/PlansForm.php:334
-msgid "Grey"
-msgstr ""
-
-#: src/Form/PlansForm.php:335
-msgid "Blue Grey"
+msgid "Icon"
 msgstr ""
 
 #: src/Form/PlansForm.php:336
+msgid "Use fontawesome.io icons, and set icon name like fa-home"
+msgstr ""
+
+#: src/Form/PlansForm.php:344
+msgid "Color"
+msgstr ""
+
+#: src/Form/PlansForm.php:346
+msgid "Red"
+msgstr ""
+
+#: src/Form/PlansForm.php:347
+msgid "Pink"
+msgstr ""
+
+#: src/Form/PlansForm.php:348
+msgid "Purple"
+msgstr ""
+
+#: src/Form/PlansForm.php:349
+msgid "Deep Purple"
+msgstr ""
+
+#: src/Form/PlansForm.php:350
+msgid "Indigo"
+msgstr ""
+
+#: src/Form/PlansForm.php:351
+msgid "Blue"
+msgstr ""
+
+#: src/Form/PlansForm.php:352
+msgid "Light Blue"
+msgstr ""
+
+#: src/Form/PlansForm.php:353
+msgid "Cyan"
+msgstr ""
+
+#: src/Form/PlansForm.php:354
+msgid "Teal"
+msgstr ""
+
+#: src/Form/PlansForm.php:355
+msgid "Green"
+msgstr ""
+
+#: src/Form/PlansForm.php:356
+msgid "Light Green"
+msgstr ""
+
+#: src/Form/PlansForm.php:357
+msgid "Lime"
+msgstr ""
+
+#: src/Form/PlansForm.php:358
+msgid "Yellow"
+msgstr ""
+
+#: src/Form/PlansForm.php:359
+msgid "Amber"
+msgstr ""
+
+#: src/Form/PlansForm.php:360
+msgid "Orange"
+msgstr ""
+
+#: src/Form/PlansForm.php:361
+msgid "Deep Orange"
+msgstr ""
+
+#: src/Form/PlansForm.php:362
+msgid "Brown"
+msgstr ""
+
+#: src/Form/PlansForm.php:363
+msgid "Grey"
+msgstr ""
+
+#: src/Form/PlansForm.php:364
+msgid "Blue Grey"
+msgstr ""
+
+#: src/Form/PlansForm.php:365
 msgid "Black"
 msgstr ""
 
-#: src/Form/PlansForm.php:340
+#: src/Form/PlansForm.php:369
 msgid "Use google design standard"
 msgstr ""
 
@@ -336,13 +368,13 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:13
+#: template/admin/category-index.phtml:13 template/admin/plans-index.phtml:14
 msgid "Action"
 msgstr ""
 
 #: template/admin/category-index.phtml:29
-#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:29
-#: template/admin/plans-index.phtml:31
+#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:31
+#: template/admin/plans-index.phtml:33
 msgid "Edit"
 msgstr ""
 
@@ -366,11 +398,7 @@ msgstr ""
 msgid "List of all plans"
 msgstr ""
 
-#: template/front/index-index.phtml:79 template/front/index-index.phtml:171
-msgid "Order"
-msgstr ""
-
-#: template/front/index-index.phtml:98
+#: template/front/index-index.phtml:49
 msgid "Main plans"
 msgstr ""
 
@@ -389,18 +417,22 @@ msgstr ""
 msgid "Your select plan"
 msgstr ""
 
-#: template/front/order-finish.phtml:64 template/front/order-finish.phtml:65
+#: template/front/order-finish.phtml:23 template/front/order-finish.phtml:24
 msgid "Order link"
 msgstr ""
 
-#: template/front/order-finish.phtml:66 template/front/order-finish.phtml:67
+#: template/front/order-finish.phtml:25 template/front/order-finish.phtml:26
 msgid "User panel"
 msgstr ""
 
-#: template/front/order-finish.phtml:68
+#: template/front/order-finish.phtml:27
 msgid "Shop index"
 msgstr ""
 
-#: template/front/order-finish.phtml:69
+#: template/front/order-finish.phtml:28
 msgid "Plan list"
+msgstr ""
+
+#: template/front/plan.phtml:52
+msgid "Order"
 msgstr ""

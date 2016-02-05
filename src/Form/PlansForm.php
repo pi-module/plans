@@ -287,7 +287,36 @@ class PlansForm extends BaseForm
                 'description' => '',
             )
         ));
-
+        // extra link
+        $this->add(array(
+            'name' => 'extra_link',
+            'type' => 'fieldset',
+            'options' => array(
+                'label' => __('Extra link'),
+            ),
+        ));
+        // link_title
+        $this->add(array(
+            'name' => 'link_title',
+            'options' => array(
+                'label' => __('Link title'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // link_url
+        $this->add(array(
+            'name' => 'link_url',
+            'options' => array(
+                'label' => __('Link url'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // extra design
         $this->add(array(
             'name' => 'extra_design',

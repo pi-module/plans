@@ -23,13 +23,25 @@ class IndexController extends ActionController
     {
         // Get info from url
         $module = $this->params('module');
+        $categorySingle = $this->params('category');
         // Get config
         $config = Pi::service('registry')->config->read($module);
         // Get list of plans and category
         $categories = Pi::api('plans', 'plans')->getPlans();
+        //
+        if (isset($categorySingle) && !empty($categorySingle) && $categorySingle > 0) {
+            $categoryList = array();
+            foreach ($categories as $category) {
+                if ($category['id'] == $categorySingle) {
+                    $categoryList[$category['id']] = $category;
+                }
+            }
+            $categories = $categoryList;
+        }
         // Set view
         $this->view()->setTemplate('index-index');
         $this->view()->assign('categories', $categories);
+        $this->view()->assign('categorySingle', $categorySingle);
         $this->view()->assign('config', $config);
     }
 }
