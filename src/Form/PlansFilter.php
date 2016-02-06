@@ -179,9 +179,9 @@ class PlansFilter extends InputFilter
                 ),
             ),
         ));
-        // link_order
+        // order_title
         $this->add(array(
-            'name' => 'link_order',
+            'name' => 'order_title',
             'required' => false,
             'filters' => array(
                 array(
