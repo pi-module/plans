@@ -48,9 +48,11 @@
                 <span><?php echo $this->escape($plan['time_period_view']); ?></span>
             </li>
             <li>
+                <?php if ($plan['price'] > 0) { ?>
                 <a href="<?php echo $this->escape($plan['orderUrl']); ?>" class="order-button" id="product1-order-button">
-                    <?php _e('Order'); ?>
+                    <?php echo $this->escape($plan['order_title']); ?>
                 </a>
+                <?php } ?>
             </li>
         </ul>
     </div>

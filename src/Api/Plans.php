@@ -182,6 +182,8 @@ class Plans extends AbstractApi
                 $plan['type_view'] = __('Module');
                 break;
         }
+        // Set order title
+        $plan['order_title'] = empty($plan['order_title']) ? __('Order') : $plan['order_title'];
         // return item
         return $plan;
     }

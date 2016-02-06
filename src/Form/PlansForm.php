@@ -287,6 +287,25 @@ class PlansForm extends BaseForm
                 'description' => '',
             )
         ));
+        // extra order
+        $this->add(array(
+            'name' => 'extra_order',
+            'type' => 'fieldset',
+            'options' => array(
+                'label' => __('Extra order'),
+            ),
+        ));
+        // order_title
+        $this->add(array(
+            'name' => 'order_title',
+            'options' => array(
+                'label' => __('Order button title'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // extra link
         $this->add(array(
             'name' => 'extra_link',
