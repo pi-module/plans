@@ -28,7 +28,7 @@ class IndexController extends ActionController
         $config = Pi::service('registry')->config->read($module);
         // Get list of plans and category
         $categories = Pi::api('plans', 'plans')->getPlans();
-        //
+        // Check and set category
         if ($config['category_active'] && isset($categorySingle) && !empty($categorySingle) && $categorySingle > 0) {
             $categoryList = array();
             foreach ($categories as $category) {
