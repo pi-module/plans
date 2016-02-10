@@ -51,6 +51,14 @@ return array(
             'value' => 'list',
             'category' => 'view',
         ),
+        'category_active' => array(
+            'category' => 'view',
+            'title' => _a('Active category url'),
+            'description' => '',
+            'edit' => 'checkbox',
+            'filter' => 'number_int',
+            'value' => 0
+        ),
         // Order
         'order_active' => array(
             'category' => 'order',

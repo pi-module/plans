@@ -50,11 +50,14 @@ class Plans extends Standard
             $matches['controller'] = $this->decode($parts[0]);
         }
 
+        // Get config
+        $config = Pi::service('registry')->config->read('plans');
+
         // Make Match
         if (isset($matches['controller'])) {
             switch ($matches['controller']) {
                 case 'index':
-                    if (isset($parts[0]) && $parts[0] == 'category') {
+                    if ($config['category_active'] && isset($parts[0]) && $parts[0] == 'category') {
                         $matches['category'] = intval($parts[1]);
                     }
                     break;

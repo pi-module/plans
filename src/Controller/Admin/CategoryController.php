@@ -22,6 +22,10 @@ class CategoryController extends ActionController
 {
     public function indexAction()
     {
+        // Get info from url
+        $module = $this->params('module');
+        // Get config
+        $config = Pi::service('registry')->config->read($module);
         // Get info
         $list = array();
         $order = array('id DESC');
@@ -34,6 +38,7 @@ class CategoryController extends ActionController
         // Set view
         $this->view()->setTemplate('category-index');
         $this->view()->assign('list', $list);
+        $this->view()->assign('config', $config);
     }
 
     public function updateAction()

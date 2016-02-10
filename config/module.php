@@ -15,7 +15,7 @@ return array(
     'meta' => array(
         'title' => _a('Plans'),
         'description' => _a('Manage website plans'),
-        'version' => '0.0.3',
+        'version' => '0.0.4',
         'license' => 'New BSD',
         'logo' => 'image/logo.png',
         'readme' => 'docs/readme.txt',

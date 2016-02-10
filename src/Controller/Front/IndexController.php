@@ -29,7 +29,7 @@ class IndexController extends ActionController
         // Get list of plans and category
         $categories = Pi::api('plans', 'plans')->getPlans();
         //
-        if (isset($categorySingle) && !empty($categorySingle) && $categorySingle > 0) {
+        if ($config['category_active'] && isset($categorySingle) && !empty($categorySingle) && $categorySingle > 0) {
             $categoryList = array();
             foreach ($categories as $category) {
                 if ($category['id'] == $categorySingle) {
