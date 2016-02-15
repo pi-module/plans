@@ -55,18 +55,15 @@ class Order extends AbstractApi
             $row = Pi::model('order', $this->getModule())->createRow();
             $row->assign($values);
             $row->save();
+            // Set url
+            $url = Pi::url(Pi::service('url')->assemble('order', array(
+                'module' => 'order',
+                'controller' => 'detail',
+                'action' => 'index',
+                'id' => $order['id'],
+            )));
             // Update by type
             switch ($plan['type']) {
-                case 'manual':
-                    // Set url
-                    $url = Pi::url(Pi::service('url')->assemble('plans', array(
-                        'module' => $this->getModule(),
-                        'controller' => 'order',
-                        'action' => 'finish',
-                        'id' => $row->id,
-                    )));
-                    break;
-
                 case 'credit':
                     // Check user module
                     if (Pi::service('module')->isActive('user')) {
@@ -79,28 +76,11 @@ class Order extends AbstractApi
                             array('uid' => $order['uid'])
                         );
                     }
-                    // Set url
-                    $url = Pi::url(Pi::service('url')->assemble('plans', array(
-                        'module' => $this->getModule(),
-                        'controller' => 'order',
-                        'action' => 'finish',
-                        'id' => $row->id,
-                    )));
                     break;
 
                 case 'role':
                     // Update role
                     Pi::service('user')->setRole($order['uid'], $plan['role']);
-                    // Set url
-                    $url = Pi::url(Pi::service('url')->assemble('plans', array(
-                        'module' => $this->getModule(),
-                        'controller' => 'order',
-                        'action' => 'finish',
-                        'id' => $row->id,
-                    )));
-                    break;
-
-                case 'module':
                     // Set url
                     $url = Pi::url(Pi::service('url')->assemble('plans', array(
                         'module' => $this->getModule(),
@@ -117,9 +97,14 @@ class Order extends AbstractApi
         }
     }
 
-    public function getOrder($id)
+    public function getOrder($parameter, $field = 'id')
     {
-        $order = Pi::model('order', $this->getModule())->find($id);
+        // Check for order module request
+        if ($field == 'order') {
+            $field = 'order_id';
+        }
+        // Get order
+        $order = Pi::model('order', $this->getModule())->find($parameter, $field);
         $order = $this->canonizeOrder($order);
         return $order;
     }
@@ -130,8 +115,23 @@ class Order extends AbstractApi
         if (empty($order)) {
             return '';
         }
+        // Order to array
         $order = $order->toArray();
-
+        // Set time
+        $order['time_order_view'] = _date($order['time_order']);
+        $order['time_start_view'] = _date($order['time_start']);
+        $order['time_end_view'] = _date($order['time_end']);
+        // Set price
+        if (Pi::service('module')->isActive('order')) {
+            $order['price_view'] = Pi::api('api', 'order')->viewPrice($order['price']);
+            $order['vat_view'] = Pi::api('api', 'order')->viewPrice($order['vat']);
+            $order['total_view'] = Pi::api('api', 'order')->viewPrice($order['total']);
+        } else {
+            $order['price_view'] = _currency($order['price']);
+            $order['vat_view'] = _currency($order['vat']);
+            $order['total_view'] = _currency($order['total']);
+        }
+        // return
         return $order;
     }
 }

@@ -53,6 +53,11 @@ class OrderController extends ActionController
                 $this->view()->setLayout('layout-simple');
                 return;
             }
+            // Set extra
+            $extra = array();
+            $extra['view_type'] = 'template';
+            $extra['view_template'] = 'order-detail';
+            $extra['getDetail'] = true;
             // Set singel Product
             $singleProduct = array(
                 'product' => $plan['id'],
@@ -64,6 +69,7 @@ class OrderController extends ActionController
                 'vat_price' => $plan['vat'],
                 'number' => 1,
                 'title' => $plan['title'],
+                'extra' => json::encode($extra),
             );
             // Set order array
             $order = array();
@@ -87,7 +93,7 @@ class OrderController extends ActionController
         }
     }
 
-    public function finishAction() {
+    /* public function finishAction() {
         // Check user is login or not
         Pi::service('authentication')->requireLogin();
         // Check order is active or inactive
@@ -166,5 +172,5 @@ class OrderController extends ActionController
         $this->view()->assign('invoices', $invoices);
         $this->view()->assign('plan', $plan);
         $this->view()->assign('message', $message);
-    }
+    } */
 }

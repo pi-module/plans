@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: support\n"
-"POT-Creation-Date: 2016-02-05 21:19+0330\n"
+"POT-Creation-Date: 2016-02-15 16:06+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -72,26 +72,29 @@ msgstr "اعتبار"
 msgid "Module"
 msgstr "ماژول"
 
-#: src/Controller/Admin/CategoryController.php:60
+#: src/Api/Plans.php:186
+msgid "Order"
+msgstr "سفارش"
+
+#: src/Controller/Admin/CategoryController.php:65
 msgid "Category data saved successfully."
 msgstr "اطلاعات شاخه به موفقیت ذخیره شد"
 
-#: src/Controller/Admin/CategoryController.php:72
+#: src/Controller/Admin/CategoryController.php:77
 #: template/admin/category-index.phtml:4 template/admin/category-index.phtml:6
 msgid "Add category"
 msgstr "شاخه جدید"
 
-#: src/Controller/Admin/PlansController.php:127
+#: src/Controller/Admin/PlansController.php:128
 msgid "Plan data saved successfully."
 msgstr "اطلاعات پلن با موفقیت ذخیره شد"
 
-#: src/Controller/Admin/PlansController.php:154
+#: src/Controller/Admin/PlansController.php:155
 #: template/admin/plans-index.phtml:4 template/admin/plans-index.phtml:6
 msgid "Add plan"
 msgstr "پلن جدید"
 
 #: src/Controller/Front/OrderController.php:29
-#: src/Controller/Front/OrderController.php:92
 msgid "So sorry, At this moment order is inactive"
 msgstr "متاسفانه در این لحظه امکان ثبت سفارش وجود ندارد"
 
@@ -100,42 +103,9 @@ msgstr "متاسفانه در این لحظه امکان ثبت سفارش وج�
 msgid "You need select plan"
 msgstr "لطفا یک پلن انتخاب کنید"
 
-#: src/Controller/Front/OrderController.php:80
+#: src/Controller/Front/OrderController.php:90
 msgid "Order module not installed"
 msgstr "ماژول سفارش نصب نشده است"
-
-#: src/Controller/Front/OrderController.php:106
-msgid "Order not set."
-msgstr "سفارش تنظیم نشده"
-
-#: src/Controller/Front/OrderController.php:111
-msgid "It not your order."
-msgstr "این سفارش شما نیست"
-
-#: src/Controller/Front/OrderController.php:116
-msgid "This order not pay"
-msgstr "این سفارش پرداخت نشده است"
-
-#: src/Controller/Front/OrderController.php:122
-msgid "This is old order and you pay it before"
-msgstr "این یک سفارش قدیمی است و شما قبلا آن را پرداخت کرده اید"
-
-#: src/Controller/Front/OrderController.php:147
-msgid ""
-"Your bought plan need manual setup by admin, we will work on it and after "
-"finish setup make contact to you"
-msgstr ""
-"پلن خریداری شده توسط شما نیازمند راه اندازی دستی توسط مدیر سیستم است، ما در "
-"حال راه اندازی آن هستیم و بعد از راه اندازی با شما تماس میگیریم."
-
-#: src/Controller/Front/OrderController.php:151
-#, php-format
-msgid ""
-"We active your user account access on <strong>%s</strong> group / role, Now "
-"you can use all new features"
-msgstr ""
-"ما دسترسی کاربری شما را در گروه <strong>%s</strong> فعال کردیم، شما میتوانید "
-"از تمام امکانات جدید یاین دسترسی استفاده نمایید."
 
 #: src/Form/CategoryForm.php:46 src/Form/PlansForm.php:48
 #: template/admin/category-index.phtml:12 template/admin/plans-index.phtml:12
@@ -162,7 +132,7 @@ msgstr "پیش نویس"
 msgid "Private"
 msgstr "خصوصی"
 
-#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:377
+#: src/Form/CategoryForm.php:76 src/Form/PlansForm.php:396
 msgid "Submit"
 msgstr "ارسال"
 
@@ -254,115 +224,123 @@ msgid "Description 10"
 msgstr "توضیحات ۱۰"
 
 #: src/Form/PlansForm.php:295
+msgid "Extra order"
+msgstr "اطلاعات اضافی سفارش"
+
+#: src/Form/PlansForm.php:302
+msgid "Order button title"
+msgstr "عنوان دکمه سفارش"
+
+#: src/Form/PlansForm.php:314
 msgid "Extra link"
 msgstr "لینک اضافی"
 
-#: src/Form/PlansForm.php:302
+#: src/Form/PlansForm.php:321
 msgid "Link title"
 msgstr "عنوان لینک"
 
-#: src/Form/PlansForm.php:313
+#: src/Form/PlansForm.php:332
 msgid "Link url"
 msgstr "آدرس لینک"
 
-#: src/Form/PlansForm.php:325
+#: src/Form/PlansForm.php:344
 msgid "Design options"
 msgstr "گزینه های طراحی"
 
-#: src/Form/PlansForm.php:332
+#: src/Form/PlansForm.php:351
 msgid "Icon"
 msgstr "آیمن"
 
-#: src/Form/PlansForm.php:336
+#: src/Form/PlansForm.php:355
 msgid "Use fontawesome.io icons, and set icon name like fa-home"
 msgstr ""
 "استفاده از آیکن های fontawesome.io، نام آیکن را تنظیم نمایید ، مثال : fa-home"
 
-#: src/Form/PlansForm.php:344
+#: src/Form/PlansForm.php:363
 msgid "Color"
 msgstr "رنگ"
 
-#: src/Form/PlansForm.php:346
+#: src/Form/PlansForm.php:365
 msgid "Red"
 msgstr "Red"
 
-#: src/Form/PlansForm.php:347
+#: src/Form/PlansForm.php:366
 msgid "Pink"
 msgstr "Pink"
 
-#: src/Form/PlansForm.php:348
+#: src/Form/PlansForm.php:367
 msgid "Purple"
 msgstr "Purple"
 
-#: src/Form/PlansForm.php:349
+#: src/Form/PlansForm.php:368
 msgid "Deep Purple"
 msgstr "Deep Purple"
 
-#: src/Form/PlansForm.php:350
+#: src/Form/PlansForm.php:369
 msgid "Indigo"
 msgstr "Indigo"
 
-#: src/Form/PlansForm.php:351
+#: src/Form/PlansForm.php:370
 msgid "Blue"
 msgstr "Blue"
 
-#: src/Form/PlansForm.php:352
+#: src/Form/PlansForm.php:371
 msgid "Light Blue"
 msgstr "Light Blue"
 
-#: src/Form/PlansForm.php:353
+#: src/Form/PlansForm.php:372
 msgid "Cyan"
 msgstr "Cyan"
 
-#: src/Form/PlansForm.php:354
+#: src/Form/PlansForm.php:373
 msgid "Teal"
 msgstr "Teal"
 
-#: src/Form/PlansForm.php:355
+#: src/Form/PlansForm.php:374
 msgid "Green"
 msgstr "Green"
 
-#: src/Form/PlansForm.php:356
+#: src/Form/PlansForm.php:375
 msgid "Light Green"
 msgstr "Light Green"
 
-#: src/Form/PlansForm.php:357
+#: src/Form/PlansForm.php:376
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Form/PlansForm.php:358
+#: src/Form/PlansForm.php:377
 msgid "Yellow"
 msgstr "Yellow"
 
-#: src/Form/PlansForm.php:359
+#: src/Form/PlansForm.php:378
 msgid "Amber"
 msgstr "Amber"
 
-#: src/Form/PlansForm.php:360
+#: src/Form/PlansForm.php:379
 msgid "Orange"
 msgstr "Orange"
 
-#: src/Form/PlansForm.php:361
+#: src/Form/PlansForm.php:380
 msgid "Deep Orange"
 msgstr "Deep Orange"
 
-#: src/Form/PlansForm.php:362
+#: src/Form/PlansForm.php:381
 msgid "Brown"
 msgstr "Brown"
 
-#: src/Form/PlansForm.php:363
+#: src/Form/PlansForm.php:382
 msgid "Grey"
 msgstr "Grey"
 
-#: src/Form/PlansForm.php:364
+#: src/Form/PlansForm.php:383
 msgid "Blue Grey"
 msgstr "Blue Grey"
 
-#: src/Form/PlansForm.php:365
+#: src/Form/PlansForm.php:384
 msgid "Black"
 msgstr "Black"
 
-#: src/Form/PlansForm.php:369
+#: src/Form/PlansForm.php:388
 msgid "Use google design standard"
 msgstr "از استاندارد طراحی متریال دیزاین گوگل استفاده می شود"
 
@@ -379,8 +357,13 @@ msgstr "شناسه"
 msgid "Action"
 msgstr "عملکرد"
 
-#: template/admin/category-index.phtml:29
-#: template/admin/category-index.phtml:31 template/admin/plans-index.phtml:31
+#: template/admin/category-index.phtml:30
+#: template/admin/category-index.phtml:32
+msgid "View"
+msgstr "نمایش"
+
+#: template/admin/category-index.phtml:34
+#: template/admin/category-index.phtml:36 template/admin/plans-index.phtml:31
 #: template/admin/plans-index.phtml:33
 msgid "Edit"
 msgstr "ویرایش"
@@ -409,39 +392,63 @@ msgstr "فهرست پلن ها"
 msgid "Main plans"
 msgstr "پلن های اصلی"
 
-#: template/front/order-finish.phtml:4
-msgid "Finish order payment"
-msgstr "پرداخت سفارش تکمیل شده است"
-
-#: template/front/order-finish.phtml:10
-#, php-format
-msgid ""
-"You pay your order at <strong>%s</strong> by <strong>%s</strong> gateway And "
-"your order id is <strong>%s</strong>"
-msgstr ""
-"شما سفارش خود را در تاریخ <strong>%s</strong> و توسط <strong>%s</"
-"strong>پرداخت کرده اید و شماره سفارش شما <strong>%s</strong> است"
-
-#: template/front/order-finish.phtml:15
+#: template/front/order-detail.phtml:9
 msgid "Your select plan"
 msgstr "پلن انتخابی شما"
 
-#: template/front/order-finish.phtml:23 template/front/order-finish.phtml:24
-msgid "Order link"
-msgstr "لینک به سفارش"
+#: template/front/order-detail.phtml:13
+msgid ""
+"Your bought plan need manual setup by admin, we will work on it and after "
+"finish setup make contact to you"
+msgstr ""
+"پلن خریداری شده توسط شما نیازمند راه اندازی دستی توسط مدیر سیستم است، ما در "
+"حال راه اندازی آن هستیم و بعد از راه اندازی با شما تماس میگیریم."
 
-#: template/front/order-finish.phtml:25 template/front/order-finish.phtml:26
-msgid "User panel"
-msgstr "پنل کاربر"
+#: template/front/order-detail.phtml:17
+#, php-format
+msgid ""
+"We active your user account access on <strong>%s</strong> group / role, Now "
+"you can use all new features"
+msgstr ""
+"ما دسترسی کاربری شما را در گروه <strong>%s</strong> فعال کردیم، شما میتوانید "
+"از تمام امکانات جدید یاین دسترسی استفاده نمایید."
 
-#: template/front/order-finish.phtml:27
-msgid "Shop index"
-msgstr "فهرست پلن ها"
+#: template/front/order-detail.phtml:21
+msgid "We update automatic your credit, you can use it now"
+msgstr ""
+"ما به صورت خودکار اعتبار شما را در وب سایت افزایش داده ایم، هم اکنون می "
+"توانید از آن استفاده نمایید"
 
-#: template/front/order-finish.phtml:28
-msgid "Plan list"
-msgstr "فهرست پلن ها"
+#~ msgid "Order not set."
+#~ msgstr "سفارش تنظیم نشده"
 
-#: template/front/plan.phtml:52
-msgid "Order"
-msgstr "سفارش"
+#~ msgid "It not your order."
+#~ msgstr "این سفارش شما نیست"
+
+#~ msgid "This order not pay"
+#~ msgstr "این سفارش پرداخت نشده است"
+
+#~ msgid "This is old order and you pay it before"
+#~ msgstr "این یک سفارش قدیمی است و شما قبلا آن را پرداخت کرده اید"
+
+#~ msgid "Finish order payment"
+#~ msgstr "پرداخت سفارش تکمیل شده است"
+
+#~ msgid ""
+#~ "You pay your order at <strong>%s</strong> by <strong>%s</strong> gateway "
+#~ "And your order id is <strong>%s</strong>"
+#~ msgstr ""
+#~ "شما سفارش خود را در تاریخ <strong>%s</strong> و توسط <strong>%s</"
+#~ "strong>پرداخت کرده اید و شماره سفارش شما <strong>%s</strong> است"
+
+#~ msgid "Order link"
+#~ msgstr "لینک به سفارش"
+
+#~ msgid "User panel"
+#~ msgstr "پنل کاربر"
+
+#~ msgid "Shop index"
+#~ msgstr "فهرست پلن ها"
+
+#~ msgid "Plan list"
+#~ msgstr "فهرست پلن ها"

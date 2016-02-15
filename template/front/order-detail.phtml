@@ -1,0 +1,29 @@
+<?php
+$this->css($this->assetModule('css/front.css', 'plans'));
+Pi::service('i18n')->load(array('module/plans', 'default'));
+$plan = $product['details'];
+$plan['price'] = 0;
+?>
+<div class="clearfix">
+    <div class="col-md-12 text-center">
+        <h3><?php _e('Your select plan'); ?></h3>
+        <?php $message = '';
+        switch ($plan['type']) {
+            case 'manual':
+                $message = __('Your bought plan need manual setup by admin, we will work on it and after finish setup make contact to you');
+                break;
+
+            case 'role':
+                $message = sprintf(__('We active your user account access on <strong>%s</strong> group / role, Now you can use all new features'), $plan['role']);
+                break;
+
+            case 'credit':
+                $message = __('We update automatic your credit, you can use it now');
+                break;
+        } ?>
+        <p><?php echo $message; ?></p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        <?php include $this->template('plan', 'front', 'plans'); ?>
+    </div>
+</div>
