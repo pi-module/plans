@@ -36,6 +36,8 @@ class Type extends Select
                 }
             }
             // Set credit action
+            /* ToDo */
+            /* Use new credit system */
             if (Pi::service('module')->isActive('user')) {
                 $field = Pi::registry('field', 'user')->read();
                 $field = array_keys($field);
