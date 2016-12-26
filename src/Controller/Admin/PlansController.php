@@ -35,10 +35,6 @@ class PlansController extends ActionController
         // Set view
         $this->view()->setTemplate('plans-index');
         $this->view()->assign('list', $list);
-
-        echo '<pre>';
-        print_r(Pi::registry('planModuleList', 'plans')->read());
-        echo '</pre>';
     }
 
     public function updateAction()
