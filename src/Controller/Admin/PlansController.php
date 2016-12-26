@@ -35,6 +35,10 @@ class PlansController extends ActionController
         // Set view
         $this->view()->setTemplate('plans-index');
         $this->view()->assign('list', $list);
+
+        echo '<pre>';
+        print_r(Pi::registry('planModuleList', 'plans')->read());
+        echo '</pre>';
     }
 
     public function updateAction()
@@ -69,6 +73,11 @@ class PlansController extends ActionController
                         'action' => 'manual',
                     );
                     $values['type'] = 'manual';
+                } elseif ($values['type'] == 'module') {
+                    $action = array(
+                        'action' => 'module',
+                    );
+                    $values['type'] = 'module';
                 } elseif ($values['type'] == 'credit') {
                     $action = array(
                         'action' => 'automatic',
@@ -124,6 +133,8 @@ class PlansController extends ActionController
                 }
                 $row->assign($values);
                 $row->save();
+                // clean registry
+                Pi::registry('planModuleList', 'plans')->clear();
                 // Check it save or not
                 $message = __('Plan data saved successfully.');
                 $this->jump(array('action' => 'index'), $message);

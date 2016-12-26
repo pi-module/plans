@@ -46,7 +46,7 @@ class Type extends Select
                 }
             }
             // Set module action
-            /* ToDo */
+            $this->valueOptions['module'] = __('Module');
         }
         return $this->valueOptions;
     }

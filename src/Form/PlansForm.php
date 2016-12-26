@@ -20,7 +20,7 @@ class PlansForm extends BaseForm
     public function __construct($name = null, $option = array())
     {
         $this->option = $option;
-        $this->module = Pi::service('module')->current();
+        $this->option['module'] = Pi::service('module')->current();
         parent::__construct($name);
     }
 
@@ -53,20 +53,6 @@ class PlansForm extends BaseForm
                 'required' => true,
             )
         ));
-        // type
-        $this->add(array(
-            'name' => 'type',
-            'type' => 'Module\Plans\Form\Element\Type',
-            'options' => array(
-                'label' => __('Type'),
-                'category' => '',
-                'module' => $this->module,
-            ),
-            'attributes' => array(
-                'description' => '',
-                'required' => true,
-            )
-        ));
         // category
         $this->add(array(
             'name' => 'category',
@@ -74,8 +60,38 @@ class PlansForm extends BaseForm
             'options' => array(
                 'label' => __('Category'),
                 'category' => '',
-                'module' => $this->module,
+                'module' => $this->option['module'],
             ),
+        ));
+        // type
+        $this->add(array(
+            'name' => 'type',
+            'type' => 'Module\Plans\Form\Element\Type',
+            'options' => array(
+                'label' => __('Type'),
+                'category' => '',
+                'module' => $this->option['module'],
+            ),
+            'attributes' => array(
+                'description' => '',
+                'required' => true,
+            )
+        ));
+        // module
+        $this->add(array(
+            'name' => 'module',
+            'type' => 'select',
+            'options' => array(
+                'label' => __('Module'),
+                'value_options' => array(
+                    '' => '',
+                    'video' => __('Video'),
+                    'guide' => __('guide'),
+                ),
+            ),
+            'attributes' => array(
+                'description' => __('Use it when you select module type'),
+            )
         ));
         // status
         $this->add(array(

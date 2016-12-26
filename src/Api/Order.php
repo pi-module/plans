@@ -89,6 +89,27 @@ class Order extends AbstractApi
                         'id' => $row->id,
                     )));
                     break;
+
+                case 'module':
+                    if (!empty($plan['module'])) {
+                        switch ($plan['module']) {
+                            case 'video':
+                                $access = array(
+                                    'time_start' => time(),
+                                    'time_end' => intval(time() + ($plan['time_period'] * 24 * 60 * 60)),
+                                    'item_key' => sprintf('video-package-%s-%s', $plan['id'], $order['uid']),
+                                    'order' => $order['id'],
+                                    'status' => 1,
+                                );
+                                Pi::api('access', 'order')->setAccess($access);
+                                break;
+
+                            case 'guide':
+
+                                break;
+                        }
+                    }
+                    break;
             }
             // Send notification
             //Pi::api('notification', 'plans')->newPlan($order, $plan);

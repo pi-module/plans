@@ -39,10 +39,18 @@ class PlansFilter extends InputFilter
             'name' => 'type',
             'required' => true,
         ));
-        // category
+        // module
         $this->add(array(
-            'name' => 'category',
+            'name' => 'module',
             'required' => false,
+            'validators' => array(
+                new \Module\Plans\Validator\Type,
+            ),
+        ));
+        // status
+        $this->add(array(
+            'name' => 'status',
+            'required' => true,
         ));
         // status
         $this->add(array(
