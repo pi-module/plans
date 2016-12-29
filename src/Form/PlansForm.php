@@ -303,6 +303,61 @@ class PlansForm extends BaseForm
                 'description' => '',
             )
         ));
+        // description_11
+        $this->add(array(
+            'name' => 'description_11',
+            'options' => array(
+                'label' => __('Description 11'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // description_12
+        $this->add(array(
+            'name' => 'description_12',
+            'options' => array(
+                'label' => __('Description 12'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // description_13
+        $this->add(array(
+            'name' => 'description_13',
+            'options' => array(
+                'label' => __('Description 13'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // description_14
+        $this->add(array(
+            'name' => 'description_14',
+            'options' => array(
+                'label' => __('Description 14'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
+        // description_15
+        $this->add(array(
+            'name' => 'description_15',
+            'options' => array(
+                'label' => __('Description 15'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => '',
+            )
+        ));
         // extra order
         $this->add(array(
             'name' => 'extra_order',

@@ -192,6 +192,56 @@ class PlansFilter extends InputFilter
                 ),
             ),
         ));
+        // description_11
+        $this->add(array(
+            'name' => 'description_11',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // description_12
+        $this->add(array(
+            'name' => 'description_12',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // description_13
+        $this->add(array(
+            'name' => 'description_13',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // description_14
+        $this->add(array(
+            'name' => 'description_14',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
+        // description_15
+        $this->add(array(
+            'name' => 'description_15',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // order_title
         $this->add(array(
             'name' => 'order_title',
