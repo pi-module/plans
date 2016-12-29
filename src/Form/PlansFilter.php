@@ -34,6 +34,11 @@ class PlansFilter extends InputFilter
                 ),
             ),
         ));
+        // category
+        $this->add(array(
+            'name' => 'category',
+            'required' => false,
+        ));
         // type
         $this->add(array(
             'name' => 'type',

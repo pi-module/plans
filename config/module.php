@@ -15,7 +15,7 @@ return array(
     'meta' => array(
         'title' => _a('Plans'),
         'description' => _a('Manage website plans'),
-        'version' => '0.0.5',
+        'version' => '0.0.6',
         'license' => 'New BSD',
         'logo' => 'image/logo.png',
         'readme' => 'docs/readme.txt',
@@ -36,6 +36,7 @@ return array(
         'permission' => 'permission.php',
         'page' => 'page.php',
         'navigation' => 'navigation.php',
+        'block' => 'block.php',
         'route' => 'route.php',
     ),
 );
