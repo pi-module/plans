@@ -26,9 +26,10 @@ class Block
         if ($block['category'] == 0) {
             return false;
         }
+        // Load language
+        Pi::service('i18n')->load(array('module/plans', 'default'));
         // Get list
         $block['resources'] = Pi::api('plans', 'plans')->getPlansLight($block['category']);
-
 
         return $block;
     }
