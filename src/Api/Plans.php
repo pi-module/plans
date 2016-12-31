@@ -102,6 +102,8 @@ class Plans extends AbstractApi
             return '';
         }
         $plan = $plan->toArray();
+        // Get config
+        $config = Pi::service('registry')->config->read($this->getModule());
         // Set description
         $setting = Json::decode($plan['setting'], true);
         $plan = array_merge($plan, $setting['description'], $setting['action'], $setting['design']);
@@ -109,7 +111,23 @@ class Plans extends AbstractApi
         if ($plan['price'] > 0) {
             $plan['price_view'] = Pi::api('api', 'plans')->viewPrice($plan['price']);
         } else {
-            $plan['price_view'] = __('Free');
+            switch ($config['view_price_type']) {
+                case 'free':
+                    $plan['price_view'] = __('Free');
+                    break;
+
+                case 'contact':
+                    $plan['price_view'] = __('Contact');
+                    break;
+
+                case 'adaptive':
+                    $plan['price_view'] = __('Adaptive');
+                    break;
+
+                case 'hide':
+                    $plan['price_view'] = '';
+                    break;
+            }
         }
         // Set vat
         $plan['vat_view'] = Pi::api('api', 'plans')->viewPrice($plan['vat']);

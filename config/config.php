@@ -59,6 +59,23 @@ return array(
             'filter' => 'number_int',
             'value' => 0
         ),
+        'view_price_type' => array(
+            'title' => _a('Action for price 0'),
+            'edit' => array(
+                'type' => 'select',
+                'options' => array(
+                    'options' => array(
+                        'free' => _a('Free'),
+                        'contact' => _a('Contact'),
+                        'adaptive' => _a('Adaptive'),
+                        'hide' => _a('Hide'),
+                    ),
+                ),
+            ),
+            'filter' => 'text',
+            'value' => 'free',
+            'category' => 'view',
+        ),
         // Order
         'order_active' => array(
             'category' => 'order',
