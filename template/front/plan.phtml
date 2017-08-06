@@ -58,17 +58,23 @@
                     </a>
                 </li>
             <?php } ?>
-            <li>
-                <h3><?php echo $this->escape($plan['price_view']); ?></h3>
-                <span><?php echo $this->escape($plan['time_period_view']); ?></span>
-            </li>
-            <li>
-                <?php if ($plan['price'] > 0) { ?>
-                <a href="<?php echo $this->escape($plan['orderUrl']); ?>" class="order-button" id="product1-order-button">
-                    <?php echo $this->escape($plan['order_title']); ?>
-                </a>
-                <?php } ?>
-            </li>
+            <?php if (!empty($plan['price_view']) || !empty($plan['time_period_view'])) { ?>
+                <li>
+                    <?php if (!empty($plan['price_view'])) { ?>
+                        <h3><?php echo $this->escape($plan['price_view']); ?></h3>
+                    <?php } ?>
+                    <?php if (!empty($plan['time_period_view'])) { ?>
+                        <span><?php echo $this->escape($plan['time_period_view']); ?></span>
+                    <?php } ?>
+                </li>
+            <?php } ?>
+            <?php if ($plan['price'] > 0) { ?>
+                <li>
+                    <a href="<?php echo $this->escape($plan['orderUrl']); ?>" class="order-button" id="product1-order-button">
+                        <?php echo $this->escape($plan['order_title']); ?>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 </div>

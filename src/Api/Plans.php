@@ -132,12 +132,16 @@ class Plans extends AbstractApi
         // Set vat
         $plan['vat_view'] = Pi::api('api', 'plans')->viewPrice($plan['vat']);
         // Set order url
-        $plan['orderUrl'] = Pi::url(Pi::service('url')->assemble('plans', array(
-            'module' => $this->getModule(),
-            'controller' => 'order',
-            'action' => 'add',
-            'id' => $plan['id'],
-        )));
+        if (isset($plan['order_url']) && !empty($plan['order_url'])) {
+            $plan['orderUrl'] = $plan['order_url'];
+        } else {
+            $plan['orderUrl'] = Pi::url(Pi::service('url')->assemble('plans', array(
+                'module' => $this->getModule(),
+                'controller' => 'order',
+                'action' => 'add',
+                'id' => $plan['id'],
+            )));
+        }
         // Set product Url
         $plan['productUrl'] = Pi::url(Pi::service('url')->assemble('plans', array(
             'module' => $this->getModule(),
@@ -183,6 +187,10 @@ class Plans extends AbstractApi
 
             case 365:
                 $plan['time_period_view'] = __('12 months');
+                break;
+
+            case 999:
+                $plan['time_period_view'] = '';
                 break;
         }
         // Set type view

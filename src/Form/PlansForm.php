@@ -170,6 +170,7 @@ class PlansForm extends BaseForm
                         150 => __('5 months'),
                         180 => __('6 months'),
                         365 => __('12 months'),
+                        999 => __('Unlimited (Hide time)'),
                     ),
                 ),
                 'attributes' => array(
@@ -375,6 +376,17 @@ class PlansForm extends BaseForm
             'attributes' => array(
                 'type' => 'text',
                 'description' => '',
+            )
+        ));
+        // order_url
+        $this->add(array(
+            'name' => 'order_url',
+            'options' => array(
+                'label' => __('Order url'),
+            ),
+            'attributes' => array(
+                'type' => 'text',
+                'description' => __('If set it, when click on order button, this link will be open'),
             )
         ));
         // extra link

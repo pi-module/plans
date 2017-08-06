@@ -252,6 +252,16 @@ class PlansFilter extends InputFilter
                 ),
             ),
         ));
+        // order_url
+        $this->add(array(
+            'name' => 'order_url',
+            'required' => false,
+            'filters' => array(
+                array(
+                    'name' => 'StringTrim',
+                ),
+            ),
+        ));
         // link_title
         $this->add(array(
             'name' => 'link_title',

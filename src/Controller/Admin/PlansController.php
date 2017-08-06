@@ -113,6 +113,7 @@ class PlansController extends ActionController
                     'description_14' => $values['description_14'],
                     'description_15' => $values['description_15'],
                     'order_title' => $values['order_title'],
+                    'order_url' => $values['order_url'],
                     'link_title' => $values['link_title'],
                     'link_url' => $values['link_url'],
                 );
