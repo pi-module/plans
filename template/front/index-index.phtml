@@ -12,19 +12,19 @@
         <?php foreach ($categories as $category) { ?>
             <?php if (!empty($category['plans'])) { ?>
                 <?php if (count($category['plans']) == 1) {
-                    $class = 'col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
+                    $class = 'col-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
                 } elseif (count($category['plans']) == 2) {
-                    $class = 'col-xs-12 col-sm-6 col-md-4 col-md-offset-1';
+                    $class = 'col-12 col-sm-6 col-md-4 col-md-offset-1';
                 } elseif (count($category['plans']) == 3) {
-                    $class = 'col-xs-12 col-sm-4 col-md-4';
+                    $class = 'col-12 col-sm-4 col-md-4';
                 } elseif (count($category['plans']) == 4) {
-                    $class = 'col-xs-12 col-sm-6 col-md-3';
+                    $class = 'col-12 col-sm-6 col-md-3';
                 } elseif (count($category['plans']) == 5) {
-                    $class = 'col-xs-12 col-sm-4 col-md-2';
+                    $class = 'col-12 col-sm-4 col-md-2';
                 } elseif (count($category['plans']) == 6) {
-                    $class = 'col-xs-12 col-sm-3 col-md-2';
+                    $class = 'col-12 col-sm-3 col-md-2';
                 } else {
-                    $class = 'col-xs-12 col-sm-6 col-md-3';
+                    $class = 'col-12 col-sm-6 col-md-3';
                 } ?>
                 <div class="clearfix plans-category-list">
                     <?php if (!empty($category['title'])) { ?>
@@ -60,19 +60,19 @@
                 <?php foreach ($categories as $category) { ?>
                     <?php if (!empty($category['plans'])) { ?>
                         <?php if (count($category['plans']) == 1) {
-                            $class = 'col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
+                            $class = 'col-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
                         } elseif (count($category['plans']) == 2) {
-                            $class = 'col-xs-12 col-sm-6 col-md-3 col-md-offset-2';
+                            $class = 'col-12 col-sm-6 col-md-3 col-md-offset-2';
                         } elseif (count($category['plans']) == 3) {
-                            $class = 'col-xs-12 col-sm-4 col-md-4';
+                            $class = 'col-12 col-sm-4 col-md-4';
                         } elseif (count($category['plans']) == 4) {
-                            $class = 'col-xs-12 col-sm-6 col-md-3';
+                            $class = 'col-12 col-sm-6 col-md-3';
                         } elseif (count($category['plans']) == 5) {
-                            $class = 'col-xs-12 col-sm-4 col-md-2';
+                            $class = 'col-12 col-sm-4 col-md-2';
                         } elseif (count($category['plans']) == 6) {
-                            $class = 'col-xs-12 col-sm-3 col-md-2';
+                            $class = 'col-12 col-sm-3 col-md-2';
                         } else {
-                            $class = 'col-xs-12 col-sm-6 col-md-3';
+                            $class = 'col-12 col-sm-6 col-md-3';
                         } ?>
                         <div role="tabpanel" class="tab-pane<?php if ($category['active'] == 1) { echo ' active';} ?> clearfix" id="category-<?php echo $this->escape($category['id']); ?>">
                             <?php foreach($category['plans'] as $plan) { ?>
