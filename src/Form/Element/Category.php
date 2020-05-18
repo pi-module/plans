@@ -13,7 +13,7 @@
 namespace Module\Plans\Form\Element;
 
 use Pi;
-use Zend\Form\Element\Select;
+use Laminas\Form\Element\Select;
 
 class Category extends Select
 {

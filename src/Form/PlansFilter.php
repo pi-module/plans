@@ -13,7 +13,7 @@
 namespace Module\Plans\Form;
 
 use Pi;
-use Zend\InputFilter\InputFilter;
+use Laminas\InputFilter\InputFilter;
 
 class PlansFilter extends InputFilter
 {
