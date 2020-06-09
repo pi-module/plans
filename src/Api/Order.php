@@ -14,8 +14,8 @@ namespace Module\Plans\Api;
 
 use Pi;
 use Pi\Application\Api\AbstractApi;
-use Zend\Db\Sql\Predicate\Expression;
-use Zend\Json\Json;
+use Laminas\Db\Sql\Predicate\Expression;
+use Laminas\Json\Json;
 
 /*
  * Pi::api('order', 'plans')->getProductDetails($product);

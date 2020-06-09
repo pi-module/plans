@@ -17,7 +17,7 @@ use Pi;
 use Pi\Mvc\Controller\ActionController;
 use Module\Plans\Form\PlansForm;
 use Module\Plans\Form\PlansFilter;
-use Zend\Json\Json;
+use Laminas\Json\Json;
 
 class PlansController extends ActionController
 {

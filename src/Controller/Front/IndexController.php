@@ -15,7 +15,7 @@ namespace Module\Plans\Controller\Front;
 
 use Pi;
 use Pi\Mvc\Controller\ActionController;
-use Zend\Json\Json;
+use Laminas\Json\Json;
 
 class IndexController extends ActionController
 {
