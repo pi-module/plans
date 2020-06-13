@@ -60,8 +60,8 @@ class CategoryController extends ActionController
                 $values = $form->getData();
 
                 // Save values
-                if (!empty($values['id'])) {
-                    $row = $this->getModel('category')->find($values['id']);
+                if (!empty($id)) {
+                    $row = $this->getModel('category')->find($id);
                 } else {
                     $row = $this->getModel('category')->createRow();
                 }

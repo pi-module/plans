@@ -131,14 +131,14 @@ class PlansController extends ActionController
                 $values['setting']      = Json::encode($setting);
 
                 // Set time
-                if (empty($values['id'])) {
+                if (empty($id)) {
                     $values['time_create'] = time();
                 }
                 $values['time_update'] = time();
 
                 // Save values
-                if (!empty($values['id'])) {
-                    $row = $this->getModel('plans')->find($values['id']);
+                if (!empty($id)) {
+                    $row = $this->getModel('plans')->find($id);
                 } else {
                     $row = $this->getModel('plans')->createRow();
                 }
