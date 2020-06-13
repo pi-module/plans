@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Installer\Action;
 
 use Pi;
@@ -25,9 +26,9 @@ class Update extends BasicUpdate
     protected function attachDefaultListeners()
     {
         $events = $this->events;
-        $events->attach('update.pre', array($this, 'updateSchema'));
+        $events->attach('update.pre', [$this, 'updateSchema']);
         parent::attachDefaultListeners();
-        
+
         return $this;
     }
 
@@ -39,21 +40,24 @@ class Update extends BasicUpdate
         $moduleVersion = $e->getParam('version');
 
         // Set plans model
-        $plansModel = Pi::model('plans', $this->module);
-        $plansTable = $plansModel->getTable();
+        $plansModel   = Pi::model('plans', $this->module);
+        $plansTable   = $plansModel->getTable();
         $plansAdapter = $plansModel->getAdapter();
 
         if (version_compare($moduleVersion, '0.0.5', '<')) {
+
             // Alter table field `module`
             $sql = sprintf("ALTER TABLE %s ADD `module` VARCHAR(32) NOT NULL DEFAULT ''", $plansTable);
             try {
                 $plansAdapter->query($sql, 'execute');
             } catch (\Exception $exception) {
-                $this->setResult('db', array(
-                    'status' => false,
+                $this->setResult(
+                    'db', [
+                    'status'  => false,
                     'message' => 'Table alter query failed: '
-                        . $exception->getMessage(),
-                ));
+                                 . $exception->getMessage(),
+                ]
+                );
                 return false;
             }
         }

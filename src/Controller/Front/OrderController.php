@@ -23,6 +23,7 @@ class OrderController extends ActionController
     {
         // Get uid
         $uid = Pi::user()->getId();
+
         // Check order is active or inactive
         if (!$this->config('order_active')) {
             $this->getResponse()->setStatusCode(401);
@@ -30,13 +31,17 @@ class OrderController extends ActionController
             $this->view()->setLayout('layout-simple');
             return;
         }
+
         // Set template
         $this->view()->setTemplate(false);
+
         // check order module
         if (Pi::service('module')->isActive('order')) {
+
             // Get info from url
             $module = $this->params('module');
-            $id = $this->params('id');
+            $id     = $this->params('id');
+
             // Check id
             if (!$id) {
                 $this->getResponse()->setStatusCode(401);
@@ -44,8 +49,10 @@ class OrderController extends ActionController
                 $this->view()->setLayout('layout-simple');
                 return;
             }
+
             // Get plan
             $plan = Pi::api('plans', 'plans')->getPlan($id);
+
             // Check plan
             if (!$plan || $plan['status'] != 1) {
                 $this->getResponse()->setStatusCode(401);
@@ -53,35 +60,40 @@ class OrderController extends ActionController
                 $this->view()->setLayout('layout-simple');
                 return;
             }
+
             // Set extra
-            $extra = array();
-            $extra['view_type'] = 'template';
+            $extra                  = [];
+            $extra['view_type']     = 'template';
             $extra['view_template'] = 'order-detail';
-            $extra['getDetail'] = true;
+            $extra['getDetail']     = true;
+
             // Set singel Product
-            $singleProduct = array(
-                'product' => $plan['id'],
-                'product_price' => $plan['price'],
+            $singleProduct = [
+                'product'        => $plan['id'],
+                'product_price'  => $plan['price'],
                 'discount_price' => 0,
                 'shipping_price' => 0,
-                'setup_price' => 0,
-                'packing_price' => 0,
-                'vat_price' => $plan['vat'],
-                'number' => 1,
-                'title' => $plan['title'],
-                'extra' => json::encode($extra),
-            );
+                'setup_price'    => 0,
+                'packing_price'  => 0,
+                'vat_price'      => $plan['vat'],
+                'number'         => 1,
+                'title'          => $plan['title'],
+                'extra'          => json::encode($extra),
+            ];
+
             // Set order array
-            $order = array();
-            $order['module_name'] = $module;
-            $order['module_item'] = $plan['id'];
-            $order['type_payment'] = 'recurring';
-            $order['type_commodity'] = 'service';
+            $order                         = [];
+            $order['module_name']          = $module;
+            $order['module_item']          = $plan['id'];
+            $order['type_payment']         = 'recurring';
+            $order['type_commodity']       = 'service';
             $order['product'][$plan['id']] = $singleProduct;
+
             // Set session_order if user not login
             if ($uid == 0) {
                 $_SESSION['session_order'] = $singleProduct;
             }
+
             // Set and go to order
             $url = Pi::api('order', 'order')->setOrderInfo($order);
             Pi::service('url')->redirect($url);

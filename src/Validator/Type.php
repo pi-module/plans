@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Validator;
 
 use Pi;
@@ -22,17 +23,28 @@ class Type extends AbstractValidator
     /**
      * @var array
      */
-    protected $messageTemplates = array(
-        self::TAKEN => 'You should select one of this modules when type is module',
-    );
+    protected $messageTemplates = [];
 
-    protected $options = array();
+    protected $options = [];
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __construct($options = null)
+    {
+        $this->messageTemplates = [
+            self::TAKEN => __('You should select one of this modules when type is module'),
+        ];
+
+        parent::__construct($options);
+    }
 
     /**
      * Type
      *
-     * @param  mixed $value
-     * @param  array $context
+     * @param mixed $value
+     * @param array $context
+     *
      * @return boolean
      */
     public function isValid($value, $context = null)

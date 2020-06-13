@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Form\Element;
 
 use Pi;
@@ -23,11 +24,13 @@ class Category extends Select
     public function getValueOptions()
     {
         if (empty($this->valueOptions)) {
-            $this->valueOptions = array(0 => '');
-            $where = array('status' => 1);
-            $order = array('title ASC', 'id DESC');
+            $this->valueOptions = [0 => ''];
+
+            $where  = ['status' => 1];
+            $order  = ['title ASC', 'id DESC'];
             $select = Pi::model('category', $this->options['module'])->select()->where($where)->order($order);
             $rowset = Pi::model('category', $this->options['module'])->selectWith($select);
+
             foreach ($rowset as $row) {
                 $this->valueOptions[$row->id] = $row->title;
             }

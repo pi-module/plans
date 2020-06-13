@@ -10,20 +10,20 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-return array(
+return [
     // Admin section
-    'admin' => array(
-        'plans' => array(
-            'title' => _a('Plans'),
-            'access' => array(),
-        ),
-        'category' => array(
-            'title' => _a('Category'),
-            'access' => array(),
-        ),
-        'order' => array(
-            'title' => _a('Order'),
-            'access' => array(),
-        ),
-    ),
-);
+    'admin' => [
+        'plans'    => [
+            'title'  => _a('Plans'),
+            'access' => [],
+        ],
+        'category' => [
+            'title'  => _a('Category'),
+            'access' => [],
+        ],
+        'order'    => [
+            'title'  => _a('Order'),
+            'access' => [],
+        ],
+    ],
+];

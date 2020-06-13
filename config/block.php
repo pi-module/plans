@@ -10,20 +10,20 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-return array(
-    'plans' => array(
-        'title' => _a('Select category plan'),
+return [
+    'plans' => [
+        'title'       => _a('Select category plan'),
         'description' => _a('Shwo selected category plan on block'),
-        'render' => array('block', 'plans'),
-        'template' => 'plans',
-        'config' => array(
-            'category' => array(
-                'title' => _a('Category'),
+        'render'      => ['block', 'plans'],
+        'template'    => 'plans',
+        'config'      => [
+            'category' => [
+                'title'       => _a('Category'),
                 'description' => '',
-                'edit' => 'Module\Plans\Form\Element\Category',
-                'filter' => 'string',
-                'value' => 0,
-            ),
-        ),
-    ),
-);
+                'edit'        => 'Module\Plans\Form\Element\Category',
+                'filter'      => 'string',
+                'value'       => 0,
+            ],
+        ],
+    ],
+];

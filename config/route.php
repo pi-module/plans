@@ -10,18 +10,18 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
-return array(
+return [
     // route name
-    'guide' => array(
-        'name' => 'plans',
-        'type' => 'Module\Plans\Route\Plans',
-        'options' => array(
-            'route' => '/plans',
-            'defaults' => array(
-                'module' => 'plans',
+    'guide' => [
+        'name'    => 'plans',
+        'type'    => 'Module\Plans\Route\Plans',
+        'options' => [
+            'route'    => '/plans',
+            'defaults' => [
+                'module'     => 'plans',
                 'controller' => 'index',
-                'action' => 'index'
-            )
-        ),
-    )
-);
+                'action'     => 'index',
+            ],
+        ],
+    ],
+];

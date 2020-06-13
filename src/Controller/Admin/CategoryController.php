@@ -24,17 +24,21 @@ class CategoryController extends ActionController
     {
         // Get info from url
         $module = $this->params('module');
+
         // Get config
         $config = Pi::service('registry')->config->read($module);
+
         // Get info
-        $list = array();
-        $order = array('id DESC');
+        $list   = [];
+        $order  = ['id DESC'];
         $select = $this->getModel('category')->select()->order($order);
         $rowset = $this->getModel('category')->selectWith($select);
+
         // Make list
         foreach ($rowset as $row) {
             $list[$row->id] = $row->toArray();
         }
+
         // Set view
         $this->view()->setTemplate('category-index');
         $this->view()->assign('list', $list);
@@ -45,6 +49,7 @@ class CategoryController extends ActionController
     {
         // Get id
         $id = $this->params('id');
+
         // Set form
         $form = new CategoryForm('category');
         if ($this->request->isPost()) {
@@ -53,6 +58,7 @@ class CategoryController extends ActionController
             $form->setData($data);
             if ($form->isValid()) {
                 $values = $form->getData();
+
                 // Save values
                 if (!empty($values['id'])) {
                     $row = $this->getModel('category')->find($values['id']);
@@ -61,9 +67,10 @@ class CategoryController extends ActionController
                 }
                 $row->assign($values);
                 $row->save();
+
                 // Check it save or not
                 $message = __('Category data saved successfully.');
-                $this->jump(array('action' => 'index'), $message);
+                $this->jump(['action' => 'index'], $message);
             }
         } else {
             if ($id) {
@@ -71,6 +78,7 @@ class CategoryController extends ActionController
                 $form->setData($values);
             }
         }
+
         // Set view
         $this->view()->setTemplate('category-update');
         $this->view()->assign('form', $form);

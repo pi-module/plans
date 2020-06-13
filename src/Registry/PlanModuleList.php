@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Registry;
 
 use Pi;
@@ -26,12 +27,14 @@ class PlanModuleList extends AbstractRegistry
     /**
      * {@inheritDoc}
      */
-    protected function loadDynamic($options = array())
+    protected function loadDynamic($options = [])
     {
-        $return = array();
-        $where = array('status' => 1, 'type' => 'module');
+        $return = [];
+        $where  = ['status' => 1, 'type' => 'module'];
+
         $select = Pi::model('plans', $this->module)->select()->where($where);
         $rowset = Pi::model('plans', $this->module)->selectWith($select);
+
         foreach ($rowset as $row) {
             $return[$row->id] = Pi::api('plans', 'plans')->canonizePlan($row);
         }
@@ -44,8 +47,8 @@ class PlanModuleList extends AbstractRegistry
      */
     public function read()
     {
-        $options = array();
-        $result = $this->loadData($options);
+        $options = [];
+        $result  = $this->loadData($options);
 
         return $result;
     }

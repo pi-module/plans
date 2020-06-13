@@ -1,6 +1,6 @@
 <?php
 $this->css($this->assetModule('css/front.css', 'plans'));
-Pi::service('i18n')->load(array('module/plans', 'default'));
+Pi::service('i18n')->load(['module/plans', 'default']);
 $plan = $product['details'];
 $plan['price'] = 0;
 ?>
@@ -14,7 +14,9 @@ $plan['price'] = 0;
                 break;
 
             case 'role':
-                $message = sprintf(__('We active your user account access on <strong>%s</strong> group / role, Now you can use all new features'), $plan['role']);
+                $message = sprintf(
+                    __('We active your user account access on <strong>%s</strong> group / role, Now you can use all new features'), $plan['role']
+                );
                 break;
 
             case 'credit':

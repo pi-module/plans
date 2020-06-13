@@ -1,11 +1,7 @@
 <?php $this->css($this->assetModule('css/admin.css')); ?>
 <div class="clearfix">
-    <p>
-        <a class="btn btn-primary" title="<?php _e('Add plan'); ?>"
-           href="<?php echo $this->url('', array('controller' => 'plans', 'action' => 'update')); ?>"><i
-                class="fa fa-folder-open"></i> <?php _e('Add plan'); ?></a>
-    </p>
     <h3><?php _e('List of all plans'); ?></h3>
+    <?php if (isset($list) && !empty($list)) { ?>
     <table class="table table-striped table-bordered table-sm">
         <tr>
             <th><?php _e('ID'); ?></th>
@@ -14,25 +10,27 @@
             <th><?php _e('Action'); ?></th>
         </tr>
         <?php foreach ($list as $plan) { ?>
-            <?php
-            if ($plan['status'] == 1) {
+            <?php if ($plan['status'] == 1) {
                 $labelIdClass = 'label-success';
             } else {
                 $labelIdClass = 'label-warning';
-            }
-            ?>
+            } ?>
             <tr>
-                <td><span
-                        class="label <?php echo $labelIdClass; ?>"><?php echo $this->escape($plan['id']); ?></span>
-                </td>
+                <td><span class="label <?php echo $labelIdClass; ?>"><?php echo $this->escape($plan['id']); ?></span> </td>
                 <td><?php echo $this->escape($plan['title']); ?></td>
                 <td><?php echo $this->escape($plan['type_view']); ?></td>
                 <td>
                     <a class="btn btn-primary btn-sm" title="<?php _e('Edit'); ?>"
-                       href="<?php echo $this->url('', array('action' => 'update', 'id' => $plan['id'])); ?>"><i
-                            class="fa fa-edit"></i> <?php _e('Edit'); ?></a>
+                       href="<?php echo $this->url('', array('action' => 'update', 'id' => $plan['id'])); ?>">
+                        <i class="fa fa-edit"></i> <?php _e('Edit'); ?>
+                    </a>
                 </td>
             </tr>
         <?php } ?>
     </table>
+    <?php } else { ?>
+        <div class="alert alert-danger">
+            <?php _e('No plan added yet, please add new one'); ?>
+        </div>
+    <?php } ?>
 </div>

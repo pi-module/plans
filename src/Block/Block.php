@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Block;
 
 use Pi;
@@ -17,17 +18,20 @@ use Module\Guide\Form\SearchLocationForm;
 
 class Block
 {
-    public static function plans($options = array(), $module = null)
+    public static function plans($options = [], $module = null)
     {
         // Set options
-        $block = array();
+        $block = [];
         $block = array_merge($block, $options);
+
         // Check category
         if ($block['category'] == 0) {
             return false;
         }
+
         // Load language
-        Pi::service('i18n')->load(array('module/plans', 'default'));
+        Pi::service('i18n')->load(['module/plans', 'default']);
+
         // Get list
         $block['resources'] = Pi::api('plans', 'plans')->getPlansLight($block['category']);
 

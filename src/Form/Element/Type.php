@@ -10,6 +10,7 @@
 /**
  * @author Hossein Azizabadi <azizabadi@faragostaresh.com>
  */
+
 namespace Module\Plans\Form\Element;
 
 use Pi;
@@ -23,8 +24,10 @@ class Type extends Select
     public function getValueOptions()
     {
         if (empty($this->valueOptions)) {
+
             // Set manual action
             $this->valueOptions['manual'] = __('Manual');
+
             // Set role action
             $roles = Pi::service('registry')->role->read('front');
             unset($roles['member']);
@@ -35,6 +38,7 @@ class Type extends Select
                     $this->valueOptions[$key] = sprintf(__('Add role : %s'), $role['title']);
                 }
             }
+
             // Set credit action
             /* ToDo */
             /* Use new credit system */
@@ -45,6 +49,7 @@ class Type extends Select
                     $this->valueOptions['credit'] = __('Update user credit');
                 }
             }
+
             // Set module action
             $this->valueOptions['module'] = __('Module');
         }

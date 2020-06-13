@@ -4,21 +4,21 @@
         <?php if (!empty($block['resources'])) { ?>
             <?php if (count($block['resources']) == 1) {
                 $class = 'col-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
-            } elseif (count($block['resources']) == 2) {
+            } else if (count($block['resources']) == 2) {
                 $class = 'col-12 col-sm-6 col-md-4 col-md-offset-1';
-            } elseif (count($block['resources']) == 3) {
+            } else if (count($block['resources']) == 3) {
                 $class = 'col-12 col-sm-4 col-md-4';
-            } elseif (count($block['resources']) == 4) {
+            } else if (count($block['resources']) == 4) {
                 $class = 'col-12 col-sm-6 col-md-3';
-            } elseif (count($block['resources']) == 5) {
+            } else if (count($block['resources']) == 5) {
                 $class = 'col-12 col-sm-4 col-md-2';
-            } elseif (count($block['resources']) == 6) {
+            } else if (count($block['resources']) == 6) {
                 $class = 'col-12 col-sm-3 col-md-2';
             } else {
                 $class = 'col-12 col-sm-6 col-md-3';
             } ?>
             <div class="clearfix plans-category-list">
-                <?php foreach($block['resources'] as $plan) { ?>
+                <?php foreach ($block['resources'] as $plan) { ?>
                     <?php include $this->template('plan.phtml', 'front', 'plans'); ?>
                 <?php } ?>
             </div>
