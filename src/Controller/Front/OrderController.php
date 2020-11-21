@@ -61,12 +61,6 @@ class OrderController extends ActionController
                 return;
             }
 
-            // Set extra
-            $extra                  = [];
-            $extra['view_type']     = 'template';
-            $extra['view_template'] = 'order-detail';
-            $extra['getDetail']     = true;
-
             // Set singel Product
             $singleProduct = [
                 'product'        => $plan['id'],
@@ -78,16 +72,31 @@ class OrderController extends ActionController
                 'vat_price'      => $plan['vat'],
                 'number'         => 1,
                 'title'          => $plan['title'],
-                'extra'          => json::encode($extra),
+                'extra'          => json_encode(
+                    [
+                        'view_type'     => 'template',
+                        'view_template' => 'order-detail',
+                        'getDetail'     => true,
+                    ]
+                ),
             ];
 
             // Set order array
-            $order                         = [];
-            $order['module_name']          = $module;
-            $order['module_item']          = $plan['id'];
-            $order['type_payment']         = 'recurring';
-            $order['type_commodity']       = 'service';
-            $order['product'][$plan['id']] = $singleProduct;
+            $order = [
+                'module_name'    => $module,
+                'module_table'   => 'plans',
+                'type_payment'   => 'recurring',
+                'type_commodity' => 'service',
+                'total_discount' => 0,
+                'total_shipping' => 0,
+                'total_packing'  => 0,
+                'total_setup'    => 0,
+                'total_vat'      => 0,
+                'can_pay'        => 1,
+                'product'        => [
+                    $plan['id'] => $singleProduct,
+                ],
+            ];
 
             // Set session_order if user not login
             if ($uid == 0) {

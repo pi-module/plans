@@ -27,15 +27,92 @@ use Laminas\Json\Json;
 
 class Order extends AbstractApi
 {
+    public function getOrder($parameter, $field = 'id')
+    {
+        // Check for order module request
+        if ($field == 'order') {
+            $field = 'order_id';
+        }
+
+        // Get order
+        $order = Pi::model('order', $this->getModule())->find($parameter, $field);
+        $order = $this->canonizeOrder($order);
+        return $order;
+    }
+
+    public function canonizeOrder($order)
+    {
+        // Check
+        if (empty($order)) {
+            return '';
+        }
+
+        // Order to array
+        $order = $order->toArray();
+
+        // Set time
+        $order['time_order_view'] = _date($order['time_order']);
+        $order['time_start_view'] = _date($order['time_start']);
+        $order['time_end_view']   = _date($order['time_end']);
+
+        // Set price
+        if (Pi::service('module')->isActive('order')) {
+            $order['price_view'] = Pi::api('api', 'order')->viewPrice($order['price']);
+            $order['vat_view']   = Pi::api('api', 'order')->viewPrice($order['vat']);
+            $order['total_view'] = Pi::api('api', 'order')->viewPrice($order['total']);
+        } else {
+            $order['price_view'] = _currency($order['price']);
+            $order['vat_view']   = _currency($order['vat']);
+            $order['total_view'] = _currency($order['total']);
+        }
+
+        // return
+        return $order;
+    }
+
+    /*
+     * Start Order module needed functions
+     */
+    public function checkProduct($id, $type = null)
+    {
+        $product = Pi::model('plans', 'plans')->find($id, 'id');
+        if (empty($product) || $product['status'] != 1) {
+            return false;
+        }
+        return true;
+    }
+
+    public function getInstallmentDueDate($cart = [], $composition = [100])
+    {
+        return null;
+    }
+
+    public function getInstallmentComposition($extra = [])
+    {
+        return [100];
+    }
+
     public function getProductDetails($product)
     {
         return Pi::api('plans', 'plans')->getPlan($product);
     }
 
-    public function postPaymentUpdate($order, $basket)
+    public function postPaymentUpdate($order, $detail)
     {
+        // Get config
+        $config = Pi::service('registry')->config->read($this->getModule());
+
+        // Update company
+        if (empty($detail)) {
+            return false;
+        }
+
+        // Set basket
+        $detail = array_shift($detail);
+
         // Update time
-        if ($order['module_item'] > 0) {
+        if ($detail['module_item'] > 0) {
+
             // Get plan
             $plan    = Pi::api('plans', 'plans')->getPlan($order['module_item']);
             $setting = Json::decode($plan['setting'], true);
@@ -132,46 +209,34 @@ class Order extends AbstractApi
         }
     }
 
-    public function getOrder($parameter, $field = 'id')
+    public function createExtraDetailForProduct($values)
     {
-        // Check for order module request
-        if ($field == 'order') {
-            $field = 'order_id';
-        }
-
-        // Get order
-        $order = Pi::model('order', $this->getModule())->find($parameter, $field);
-        $order = $this->canonizeOrder($order);
-        return $order;
+        return json_encode(
+            [
+                'item' => $values['module_item'],
+            ]
+        );
     }
 
-    public function canonizeOrder($order)
+    public function getExtraFieldsFormForOrder()
     {
-        // Check
-        if (empty($order)) {
-            return '';
-        }
+        return [];
+    }
 
-        // Order to array
-        $order = $order->toArray();
+    public function isAlwaysAvailable($order)
+    {
+        return [
+            'status' => 1,
+        ];
+    }
 
-        // Set time
-        $order['time_order_view'] = _date($order['time_order']);
-        $order['time_start_view'] = _date($order['time_start']);
-        $order['time_end_view']   = _date($order['time_end']);
+    public function showInInvoice($order, $product)
+    {
+        return true;
+    }
 
-        // Set price
-        if (Pi::service('module')->isActive('order')) {
-            $order['price_view'] = Pi::api('api', 'order')->viewPrice($order['price']);
-            $order['vat_view']   = Pi::api('api', 'order')->viewPrice($order['vat']);
-            $order['total_view'] = Pi::api('api', 'order')->viewPrice($order['total']);
-        } else {
-            $order['price_view'] = _currency($order['price']);
-            $order['vat_view']   = _currency($order['vat']);
-            $order['total_view'] = _currency($order['total']);
-        }
-
-        // return
-        return $order;
+    public function postCancelUpdate($order, $detail)
+    {
+        return true;
     }
 }
