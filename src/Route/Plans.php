@@ -68,7 +68,7 @@ class Plans extends Standard
                         if (isset($parts[2]) && is_numeric($parts[2])) {
                             $matches['id'] = intval($parts[2]);
                         }
-                    } else if (isset($parts[1]) && $parts[1] == 'finish') {
+                    } elseif (isset($parts[1]) && $parts[1] == 'finish') {
                         $matches['action'] = 'finish';
                         if (isset($parts[2]) && is_numeric($parts[2])) {
                             $matches['id'] = intval($parts[2]);

@@ -52,7 +52,8 @@ class Update extends BasicUpdate
                 $plansAdapter->query($sql, 'execute');
             } catch (\Exception $exception) {
                 $this->setResult(
-                    'db', [
+                    'db',
+                    [
                     'status'  => false,
                     'message' => 'Table alter query failed: '
                                  . $exception->getMessage(),

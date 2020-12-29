@@ -139,7 +139,8 @@ class Order extends AbstractApi
             // Set url
             $url = Pi::url(
                 Pi::service('url')->assemble(
-                    'order', [
+                    'order',
+                    [
                         'module'     => 'order',
                         'controller' => 'detail',
                         'action'     => 'index',
@@ -170,7 +171,8 @@ class Order extends AbstractApi
                     // Set url
                     $url = Pi::url(
                         Pi::service('url')->assemble(
-                            'plans', [
+                            'plans',
+                            [
                                 'module'     => $this->getModule(),
                                 'controller' => 'order',
                                 'action'     => 'finish',

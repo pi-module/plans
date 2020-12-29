@@ -146,7 +146,8 @@ class Plans extends AbstractApi
         } else {
             $plan['orderUrl'] = Pi::url(
                 Pi::service('url')->assemble(
-                    'plans', [
+                    'plans',
+                    [
                     'module'     => $this->getModule(),
                     'controller' => 'order',
                     'action'     => 'add',
@@ -159,7 +160,8 @@ class Plans extends AbstractApi
         // Set product Url
         $plan['productUrl'] = Pi::url(
             Pi::service('url')->assemble(
-                'plans', [
+                'plans',
+                [
                 'module'     => $this->getModule(),
                 'controller' => 'index',
                 'action'     => 'index',

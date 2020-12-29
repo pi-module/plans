@@ -75,18 +75,18 @@ class PlansController extends ActionController
                         'action' => 'manual',
                     ];
                     $values['type'] = 'manual';
-                } else if ($values['type'] == 'module') {
+                } elseif ($values['type'] == 'module') {
                     $action         = [
                         'action' => 'module',
                     ];
                     $values['type'] = 'module';
-                } else if ($values['type'] == 'credit') {
+                } elseif ($values['type'] == 'credit') {
                     $action         = [
                         'action' => 'automatic',
                         'type'   => 'credit',
                     ];
                     $values['type'] = 'credit';
-                } else if (!empty($roleList) && in_array($values['type'], $roleList)) {
+                } elseif (!empty($roleList) && in_array($values['type'], $roleList)) {
                     $action         = [
                         'action' => 'automatic',
                         'type'   => 'role',
